@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>Welcome to codestutis.com</h1>
+    <button id="dark-toggle">dark mode</button>
+    <script>
+        document.getElementById("dark-toggle").addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+        });
+    </script>
 </body>
 </html>
