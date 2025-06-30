@@ -11,7 +11,6 @@ import {
 export default function Navbar() {
   return (
     <nav className="fixed bottom-2 left-1/2 transform -translate-x-1/2 max-w-full">
-    
       <Dock
         direction="middle"
         className="bg-gray-900 border border-gray-800 shadow-lg rounded-4xl px-4 py-2 max-w-full overflow-x-auto overflow-y-hidden"
@@ -28,8 +27,6 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-
-
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -42,7 +39,6 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -55,7 +51,6 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -68,9 +63,7 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-
         <Separator orientation="vertical" className="bg-gray-800" />
-
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -83,7 +76,6 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -96,7 +88,6 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
