@@ -1,0 +1,50 @@
+{
+    "languages": {
+        "color": "hsla(217, 91%, 60%, 0.3)",        
+        "textColor": "hsla(217, 91%, 60%, 1)",
+        "items": [
+            "Javascript",
+            "HTML",
+            "CSS",
+            "SQL",
+            "C",
+            "C++",
+            "Java",
+            "Python"
+        ]
+    },
+    "frameworks": {
+        "color": "hsla(142, 71%, 45%, 0.3)",     
+        "textColor": "hsla(142, 71%, 45%, 1)",
+        "items": [
+            "React",
+            "Express",
+            "Tailwind CSS",
+            "Flask"
+        ]
+    },
+    "tools": {
+        "color": "hsla(271, 91%, 65%, 0.3)",        
+        "textColor": "hsla(271, 91%, 65%, 1)",
+        "items": [
+            "Git",
+            "SVN",
+            "Vite",
+            "Maven"
+        ]
+    },
+    "databases": {
+        "color": "hsla(0, 84%, 60%, 0.3)",         
+        "textColor": "hsla(0, 84%, 60%, 1)",
+        "items": [
+            "PostgreSQL"
+        ]
+    },
+    "other": {
+        "color": "hsla(45, 93%, 47%, 0.3)",         
+        "textColor": "hsla(45, 93%, 47%, 1)",
+        "items": [
+            "REST APIs"
+        ]
+    }
+}

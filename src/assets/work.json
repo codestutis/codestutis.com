@@ -1,0 +1,74 @@
+{
+    "iol": {
+        "company": "UNH Interoperability Labs",
+        "title": "IPv6 Testing Technician",
+        "location": "Durham, NH",
+        "startDate": "May 2025",
+        "endDate": "Present",
+        "description": "Tested and shit",
+        "responsibilities": [
+            "thing 1",
+            "another thing",
+            "one last thing"
+        ],
+        "technologies": [
+            "Linux",
+            "Windows",
+            "Wireshark"
+        ]
+    },
+    "google": {
+        "company": "Google",
+        "title": "Software Engineering Intern",
+        "location": "Mountain View, CA",
+        "startDate": "June 2024",
+        "endDate": "August 2024",
+        "description": "Worked on improving search algorithms and user experience for Google Search.",
+        "responsibilities": [
+            "Developed and optimized backend services in Python",
+            "Collaborated with cross-functional teams to design new features",
+            "Wrote unit and integration tests to ensure code quality"
+        ],
+        "technologies": [
+            "Python",
+            "Go",
+            "Google Cloud Platform"
+        ]
+    },
+    "microsoft": {
+        "company": "Microsoft",
+        "title": "Software Engineer",
+        "location": "Redmond, WA",
+        "startDate": "September 2022",
+        "endDate": "May 2024",
+        "description": "Contributed to the development of Microsoft Teams, focusing on real-time collaboration features.",
+        "responsibilities": [
+            "Implemented new chat and video features using React and TypeScript",
+            "Improved application performance and scalability",
+            "Participated in code reviews and agile ceremonies"
+        ],
+        "technologies": [
+            "React",
+            "TypeScript",
+            "Azure"
+        ]
+    },
+    "amazon": {
+        "company": "Amazon",
+        "title": "Backend Developer Intern",
+        "location": "Seattle, WA",
+        "startDate": "June 2022",
+        "endDate": "August 2022",
+        "description": "Built and maintained microservices for Amazon Prime Video.",
+        "responsibilities": [
+            "Designed RESTful APIs for video streaming services",
+            "Monitored and debugged production issues",
+            "Worked with senior engineers to refactor legacy code"
+        ],
+        "technologies": [
+            "Java",
+            "AWS",
+            "Docker"
+        ]
+    }
+}
