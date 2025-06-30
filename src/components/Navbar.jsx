@@ -14,7 +14,7 @@ export default function Navbar() {
     
       <Dock
         direction="middle"
-        className="bg-gray-900 border border-gray-800 shadow-lg rounded-4xl px-4 py-2 max-w-full overflow-x-auto"
+        className="bg-gray-900 border border-gray-800 shadow-lg rounded-4xl px-4 py-2 max-w-full overflow-x-auto overflow-y-hidden"
       >
         <DockIcon className="p-2">
             <Tooltip>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-        
+
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
