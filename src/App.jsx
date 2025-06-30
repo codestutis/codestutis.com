@@ -6,6 +6,8 @@ import { Separator } from "@/components/ui/separator"
 
 function App() {
 
+  document.addEventListener("DOMContentLoaded", alert("Dont believe everything you see on this page. I am still developing!"));
+
   return (
     <div className="flex min-h-screen flex-col items-center bg-gray-950 w-full py-8 mb-12">
       <Header />
