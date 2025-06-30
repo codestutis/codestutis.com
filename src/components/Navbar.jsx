@@ -19,44 +19,58 @@ export default function Navbar() {
         <DockIcon className="p-2">
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <HomeIcon className="w-6 h-6 text-white" />
+                    <a href="#top">
+                        <HomeIcon className="w-6 h-6 text-white" />
+                    </a>
                 </TooltipTrigger>
                 <TooltipContent>
                     <p>Home</p>
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
+
+
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <AcademicCapIcon className="w-6 h-6 text-white"></AcademicCapIcon>
-                </TooltipTrigger>
-                <TooltipContent>
-                    <p>Education</p>
-                </TooltipContent>
-            </Tooltip>
-        </DockIcon>
-        <DockIcon>
-            <Tooltip>
-                <TooltipTrigger asChild>
-                    <BriefcaseIcon className="w-6 h-6 text-white"></BriefcaseIcon>
+                    <a href="#work">
+                        <BriefcaseIcon className="w-6 h-6 text-white"></BriefcaseIcon>
+                    </a>
                 </TooltipTrigger>
                 <TooltipContent>
                     <p>Work Experience</p>
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
+        
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <WrenchScrewdriverIcon className="w-6 h-6 text-white"></WrenchScrewdriverIcon>
+                    <a href="#education">
+                        <AcademicCapIcon className="w-6 h-6 text-white"></AcademicCapIcon>
+                    </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>Education</p>
+                </TooltipContent>
+            </Tooltip>
+        </DockIcon>
+
+        <DockIcon>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    <a href="#projects">
+                        <WrenchScrewdriverIcon className="w-6 h-6 text-white"></WrenchScrewdriverIcon>
+                    </a>
                 </TooltipTrigger>
                 <TooltipContent>
                     <p>Projects</p>
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
+
         <Separator orientation="vertical" className="bg-gray-800" />
+
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -69,6 +83,7 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
+
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -81,6 +96,7 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
+
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
@@ -93,7 +109,6 @@ export default function Navbar() {
                 </TooltipContent>
             </Tooltip>
         </DockIcon>
-
       </Dock>
     </nav>
   );

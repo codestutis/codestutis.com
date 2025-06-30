@@ -3,6 +3,7 @@
 
 html {
   @apply bg-gray-950;
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
