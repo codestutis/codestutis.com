@@ -1,3 +1,59 @@
 {
-    ""
+  "classly": {
+    "title": "Classly",
+    "organization": "Personal Project",
+    "location": "Durham, NH",
+    "startDate": "2024",
+    "endDate": "2024",
+    "description": "A web app that helps college students quickly find classrooms and lecture halls on campus, complete with interactive maps and real-time directions.",
+    "responsibilities": [
+      "Designed and implemented the interactive campus map UI",
+      "Integrated real-time location services for navigation",
+      "Collaborated with students to gather building data"
+    ],
+    "technologies": [
+      "React",
+      "Leaflet.js",
+      "Tailwind CSS",
+      "Firebase"
+    ]
+  },
+  "resumebinder": {
+    "title": "Resume Binder",
+    "organization": "Personal Project",
+    "location": "Remote",
+    "startDate": "2023",
+    "endDate": "2023",
+    "description": "A platform for companies to collect, organize, and search employee resumes, featuring advanced filtering and PDF export.",
+    "responsibilities": [
+      "Built resume upload and parsing functionality",
+      "Implemented advanced search and filtering",
+      "Developed PDF export and sharing features"
+    ],
+    "technologies": [
+      "Next.js",
+      "MongoDB",
+      "Node.js",
+      "PDFKit"
+    ]
+  },
+  "clashbuilder": {
+    "title": "Clash Base Builder",
+    "organization": "Personal Project",
+    "location": "Remote",
+    "startDate": "2022",
+    "endDate": "2022",
+    "description": "A tool for Clash of Clans players to design, test, and share custom base layouts with drag-and-drop functionality and attack simulations.",
+    "responsibilities": [
+      "Developed drag-and-drop base layout editor",
+      "Created attack simulation algorithms",
+      "Enabled sharing and rating of user-created bases"
+    ],
+    "technologies": [
+      "Vue.js",
+      "D3.js",
+      "Firebase",
+      "Jest"
+    ]
+  }
 }

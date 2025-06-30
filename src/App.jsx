@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 
 import workData from "@/assets/work.json";
 import educationData from "@/assets/education.json";
+import projectsData from "@/assets/projects.json"
 
 function App() {
 
@@ -73,7 +74,19 @@ function App() {
 
       <section id="projects" className="w-4/5 max-w-[690px]">
         <h1 className="flex text-white text-2xl font-bold mb-6">Projects</h1>
-
+        {Object.values(projectsData).map((project, idx) => (
+            <Experience
+              key={project.title + idx}
+              title={project.title}
+              organization={project.organization}
+              location={project.location}
+              startDate={project.startDate}
+              endDate={project.endDate}
+              description={project.description}
+              responsibilities={project.responsibilities}
+              technologies={project.technologies}
+            />
+          ))}
       </section>
 
 
