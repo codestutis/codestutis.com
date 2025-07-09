@@ -12,7 +12,7 @@ export default function Experience({
     <div className="bg-gray-900 rounded-lg p-4 shadow my-5">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
-          <h4 className="text-xl font-bold text-white">{title}</h4>
+          <h3 className="text-xl font-bold text-white">{title}</h3>
           <p className="text-gray-300">{organization}{location ? ` · ${location}` : ""}</p>
         </div>
         <div className="text-gray-400 mt-2 md:mt-0 md:text-right">

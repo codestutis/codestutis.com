@@ -17,7 +17,7 @@ function App() {
       <Separator className="w-4/5 max-w-[690px] bg-gray-800 my-5"></Separator>
 
       <section className="w-4/5 max-w-[690px]">
-        <h1 className="flex text-white text-2xl font-bold mb-6">About</h1>
+        <h2 className="flex text-white text-2xl font-bold mb-6">About</h2>
         <p className="text-white my-2">
           these are a bunch of words and stuff
         </p>
@@ -26,7 +26,7 @@ function App() {
       <Separator id="skills" className="w-4/5 max-w-[690px] bg-gray-800 my-5"></Separator>
 
       <section className="w-4/5 max-w-[690px]">
-        <h1 className="flex text-white text-2xl font-bold mb-6">Skills</h1>
+        <h2 className="flex text-white text-2xl font-bold mb-6">Skills</h2>
         <Skills />
 
       </section>
@@ -34,7 +34,7 @@ function App() {
       <Separator id="work" className="w-4/5 max-w-[690px] bg-gray-800 my-5"></Separator>
 
       <section className="w-4/5 max-w-[690px]">
-        <h1 className="flex text-white text-2xl font-bold mb-6">Work Experience</h1>
+        <h2 className="flex text-white text-2xl font-bold mb-6">Work Experience</h2>
         {Object.values(workData).map((job, idx) => (
           <Experience
             key={job.company + job.title + idx}
@@ -54,7 +54,7 @@ function App() {
       <Separator id="education" className="w-4/5 max-w-[690px] bg-gray-800 my-5"></Separator>
 
       <section className="w-4/5 max-w-[690px]">
-        <h1 className="flex text-white text-2xl font-bold mb-6">Education</h1>
+        <h2 className="flex text-white text-2xl font-bold mb-6">Education</h2>
         {Object.values(educationData).map((edu, idx) => (
           <Experience
             key={edu.school + edu.degree + idx}
@@ -71,7 +71,7 @@ function App() {
       <Separator className="w-4/5 max-w-[690px] bg-gray-800 my-5"></Separator>
 
       <section id="projects" className="w-4/5 max-w-[690px]">
-        <h1 className="flex text-white text-2xl font-bold mb-6">Projects</h1>
+        <h2 className="flex text-white text-2xl font-bold mb-6">Projects</h2>
         {Object.values(projectsData).map((project, idx) => (
             <Experience
               key={project.title + idx}
