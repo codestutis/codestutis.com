@@ -6,7 +6,7 @@ export default function Skills() {
         <div className="space-y-4">
             {Object.entries(skillData).map(([key, values]) => (
                 <div key={key}>
-                    <h3 className="text-white text-lg font-semibold capitalize my-2">{key}</h3>
+                    <h2 className="text-white text-lg font-semibold capitalize my-2">{key}</h2>
                     <div className="flex flex-wrap gap-2">
                         {values.items.map((skill) => (
                             <Badge

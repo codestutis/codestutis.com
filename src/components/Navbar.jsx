@@ -18,7 +18,7 @@ export default function Navbar() {
         <DockIcon className="p-2">
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="#top">
+                    <a href="#top" aria-label="Home">
                         <HomeIcon className="w-6 h-6 text-white" />
                     </a>
                 </TooltipTrigger>
@@ -30,7 +30,7 @@ export default function Navbar() {
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="#work">
+                    <a href="#work" aria-label="Work experience">
                         <BriefcaseIcon className="w-6 h-6 text-white"></BriefcaseIcon>
                     </a>
                 </TooltipTrigger>
@@ -42,7 +42,7 @@ export default function Navbar() {
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="#education">
+                    <a href="#education" aria-label="Eduacation">
                         <AcademicCapIcon className="w-6 h-6 text-white"></AcademicCapIcon>
                     </a>
                 </TooltipTrigger>
@@ -54,7 +54,7 @@ export default function Navbar() {
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="#projects">
+                    <a href="#projects" aria-label="Projects">
                         <WrenchScrewdriverIcon className="w-6 h-6 text-white"></WrenchScrewdriverIcon>
                     </a>
                 </TooltipTrigger>
@@ -67,7 +67,7 @@ export default function Navbar() {
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="https://github.com/codestutis" target="_blank">
+                    <a href="https://github.com/codestutis" target="_blank" rel="noopener noreferrer" aria-label="Github">
                         <FiGithub className="w-6 h-6 text-white" />
                     </a>
                 </TooltipTrigger>
@@ -79,7 +79,7 @@ export default function Navbar() {
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="https://www.linkedin.com/in/kestutis-biskis/" target="_blank">
+                    <a href="https://www.linkedin.com/in/kestutis-biskis/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
                         <FiLinkedin className="w-6 h-6 text-white" />
                     </a>
                 </TooltipTrigger>
@@ -91,7 +91,7 @@ export default function Navbar() {
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="mailto:kestutisbiskis@gmail.com" target="_blank">
+                    <a href="mailto:kestutisbiskis@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email me">
                         <FiMail className="w-6 h-6 text-white" />
                     </a>
                 </TooltipTrigger>

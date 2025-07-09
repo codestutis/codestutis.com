@@ -7,23 +7,5 @@
     "startDate": "2024",
     "endDate": "Present",
     "description": "Pursuing a BS in Computer Science with coursework in algorithms, software engineering, and systems programming."
-  },
-  "mit": {
-    "school": "Massachusetts Institute of Technology",
-    "degree": "Master of Science",
-    "major": "Artificial Intelligence",
-    "location": "Cambridge, MA",
-    "startDate": "2028",
-    "endDate": "2030",
-    "description": "Completed a highly competitive MS program focused on advanced machine learning, robotics, and AI research."
-  },
-  "stanford": {
-    "school": "Stanford University",
-    "degree": "Ph.D.",
-    "major": "Computer Science",
-    "location": "Stanford, CA",
-    "startDate": "2030",
-    "endDate": "2035",
-    "description": "Earned a Ph.D. with research in distributed systems and scalable cloud computing, publishing in top-tier conferences."
   }
 }

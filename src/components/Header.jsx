@@ -13,7 +13,7 @@ export default function Header() {
                     <address className="text-white not-italic">&#128205; Durham, NH</address>
                 </div>
                 <Avatar className="h-24 w-24 sm:h-36 sm:w-36">
-                    <AvatarImage src={Image} />
+                    <AvatarImage src={Image} alt="Cookie icon" />
                     <AvatarFallback />
                 </Avatar>
             </div>
