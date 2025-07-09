@@ -1,7 +1,7 @@
 {
     "languages": {
         "color": "hsla(217, 91%, 60%, 0.2)",        
-        "textColor": "hsla(217, 91%, 60%, 1)",
+        "textColor": "hsla(217, 91%, 65%, 1)",
         "items": [
             "Javascript",
             "HTML",
@@ -16,7 +16,7 @@
     },
     "frameworks": {
         "color": "hsla(142, 71%, 45%, 0.2)",     
-        "textColor": "hsla(142, 71%, 45%, 1)",
+        "textColor": "hsla(142, 71%, 50%, 1)",
         "items": [
             "React",
             "Express",
@@ -26,7 +26,7 @@
     },
     "tools": {
         "color": "hsla(271, 91%, 65%, 0.2)",        
-        "textColor": "hsla(271, 91%, 65%, 1)",
+        "textColor": "hsla(271, 91%, 70%, 1)",
         "items": [
             "Git",
             "SVN",
@@ -36,14 +36,14 @@
     },
     "databases": {
         "color": "hsla(0, 84%, 60%, 0.2)",         
-        "textColor": "hsla(0, 84%, 60%, 1)",
+        "textColor": "hsla(0, 84%, 65%, 1)",
         "items": [
             "PostgreSQL"
         ]
     },
     "other": {
         "color": "hsla(45, 93%, 47%, 0.2)",         
-        "textColor": "hsla(45, 93%, 47%, 1)",
+        "textColor": "hsla(45, 93%, 52%, 1)",
         "items": [
             "REST APIs",
             "Linux",
