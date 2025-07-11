@@ -72,7 +72,7 @@ function App() {
 
       <section id="projects" className="w-4/5 max-w-[690px]">
         <h2 className="flex text-white text-2xl font-bold mb-6">Projects</h2>
-        {Object.values(projectsData).map((project, idx) => (
+        {/* {Object.values(projectsData).map((project, idx) => (
             <Experience
               key={project.title + idx}
               title={project.title}
@@ -84,7 +84,7 @@ function App() {
               responsibilities={project.responsibilities}
               technologies={project.technologies}
             />
-          ))}
+          ))} */}
       </section>
 
 

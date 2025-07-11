@@ -5,11 +5,8 @@
         "location": "Durham, NH",
         "startDate": "May 2025",
         "endDate": "Present",
-        "description": "Tested and shit",
+        "description": "Tested stuff",
         "responsibilities": [
-            "thing 1",
-            "another thing",
-            "one last thing"
         ],
         "technologies": [
             "Linux",
