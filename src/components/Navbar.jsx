@@ -91,7 +91,7 @@ export default function Navbar() {
         <DockIcon>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <a href="mailto:kestutisbiskis@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email me">
+                    <a href="mailto:codestutis@codestutis.com" target="_blank" rel="noopener noreferrer" aria-label="Email me">
                         <FiMail className="w-6 h-6 text-white" />
                     </a>
                 </TooltipTrigger>
