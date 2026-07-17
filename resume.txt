@@ -1,0 +1,4 @@
+Kestutis Biškis — Résumé placeholder
+
+Replace public/resume.txt with your finished résumé, then update
+site.resumePath in content/portfolio.yaml if the filename changes.
