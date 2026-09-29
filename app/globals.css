@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.5rem;
+}
+
+.shiki {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+.shiki span {
+  color: var(--shiki-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  .shiki {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+  }
+
+  .shiki span {
+    color: var(--shiki-dark) !important;
+  }
+}

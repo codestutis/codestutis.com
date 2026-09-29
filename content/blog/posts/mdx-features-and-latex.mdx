@@ -1,0 +1,230 @@
+[← All posts](/blog)
+
+`// mdx field guide`
+
+# MDX features, from Markdown to math
+
+*September 25, 2026 · 8 min read*
+
+MDX keeps the familiar rhythm of Markdown and adds components when an article needs something more expressive. This post is a working tour of the features enabled on this site.
+
+> The useful part of MDX is not that every paragraph *can* become JSX. It is that ordinary writing can stay ordinary.
+
+## Typography and links
+
+Markdown handles the everyday details: **strong emphasis**, *subtle emphasis*, `inline code`, and [links to useful references](https://mdxjs.com/). GitHub-Flavored Markdown also adds ~~ideas that did not survive review~~ strikethrough text.
+
+The same syntax supports structured lists:
+
+- Start with the claim.
+- Add the evidence.
+  - Keep supporting details close to the idea they explain.
+- Finish with a useful next step.
+
+1. Write the first draft.
+2. Test every example.
+3. Edit for the reader.
+
+## Tables with GitHub-Flavored Markdown
+
+Tables are useful when the relationship between several items matters more than prose.
+
+| Layer | Package | Responsibility |
+| --- | --- | --- |
+| Markdown | `remark-math` | Recognizes inline and display math syntax |
+| HTML | `rehype-katex` | Converts math nodes into HTML and MathML |
+| Presentation | `katex` | Supplies the stylesheet and font assets |
+
+## Code blocks
+
+Fenced blocks preserve code formatting and language labels for future syntax-highlighting support.
+
+```ts
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-gfm", "remark-math"],
+    rehypePlugins: ["rehype-katex"],
+  },
+});
+```
+
+Inline code works naturally inside a sentence too: the post registry calls `post.load()` to import this file.
+
+## A polyglot highlighting tour
+
+Shiki uses the language after the opening fence to select a TextMate grammar. These examples cover the main kinds of code that appear in this blog.
+
+### Go
+
+Types, goroutines, channels, strings, and control flow each receive distinct tokens.
+
+```go
+package main
+
+import "fmt"
+
+func worker(jobs <-chan int, results chan<- int) {
+    for job := range jobs {
+        results <- job * job
+    }
+}
+
+func main() {
+    jobs := make(chan int, 3)
+    results := make(chan int, 3)
+
+    go worker(jobs, results)
+    for _, job := range []int{2, 4, 8} {
+        jobs <- job
+    }
+    close(jobs)
+
+    fmt.Println(<-results)
+}
+```
+
+### C
+
+The C grammar distinguishes preprocessor directives, standard-library types, pointers, constants, and function calls.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    const char *host;
+    unsigned short port;
+} Peer;
+
+int main(void) {
+    Peer peer = { .host = "192.0.2.1", .port = 8080 };
+    printf("Connecting to %s:%u\n", peer.host, peer.port);
+    return EXIT_SUCCESS;
+}
+```
+
+### Bash
+
+Shell blocks highlight commands, variables, quoting, pipes, and conditionals.
+
+```bash
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+target="${1:-example.com}"
+if ping -c 1 "$target" >/dev/null 2>&1; then
+  printf '%s is reachable\n' "$target"
+else
+  printf '%s is unavailable\n' "$target" >&2
+  exit 1
+fi
+```
+
+### Python
+
+Decorators, type hints, comprehensions, f-strings, and keywords are covered by the Python grammar.
+
+```python
+from collections.abc import Iterable
+
+
+def normalize(values: Iterable[float]) -> list[float]:
+    samples = list(values)
+    peak = max(samples, default=1.0)
+    return [value / peak for value in samples]
+
+
+print(f"normalized={normalize([2.0, 4.0, 8.0])}")
+```
+
+### SQL
+
+SQL highlighting makes clauses, functions, identifiers, and values easier to scan.
+
+```sql
+SELECT
+  route,
+  AVG(duration_ms) AS average_duration,
+  PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY duration_ms) AS p95
+FROM request_metrics
+WHERE recorded_at >= CURRENT_DATE - INTERVAL '7 days'
+GROUP BY route
+ORDER BY p95 DESC;
+```
+
+### JSON and plain text
+
+Configuration data can declare `json`; output that should not be tokenized can explicitly use `text`.
+
+```json
+{
+  "service": "chess-analysis",
+  "replicas": 3,
+  "observability": {
+    "metrics": true,
+    "traces": true
+  }
+}
+```
+
+```text
+[ready] server listening on 127.0.0.1:3000
+[info]  processed 24 games in 1.82s
+```
+
+## Inline LaTeX-style math
+
+Inline expressions sit inside prose. Einstein's mass-energy relation is $E = mc^2$, and the average of $n$ observations is $\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i$.
+
+Literal dollar signs can be escaped when needed: a five-dollar example would be written as `\$5` in the source.
+
+## Display equations
+
+Display math gets its own line and remains horizontally scrollable on narrow screens.
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+$$
+
+KaTeX also supports aligned expressions:
+
+$$
+\begin{aligned}
+T(n) &= 2T\left(\frac{n}{2}\right) + n \\
+     &= O(n \log n)
+\end{aligned}
+$$
+
+And matrices render with the same Markdown-first workflow:
+
+$$
+A =
+\begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix},
+\qquad
+\det(A) = -2
+$$
+
+<Callout title="Rendered at build time">
+  These equations become accessible HTML and MathML during compilation. The browser downloads KaTeX styles and fonts, but it does not need client-side KaTeX JavaScript to render the article.
+</Callout>
+
+## Components when Markdown is not enough
+
+The callout above is a React component supplied through `mdx-components.tsx`. Its content is still written as Markdown, while the component owns presentation and semantics.
+
+That boundary is the main design rule for this blog:
+
+- Use Markdown for article structure and prose.
+- Use plugins for syntax such as math and tables.
+- Use components for reusable interface patterns.
+- Avoid raw HTML in content files.
+
+---
+
+This post itself is the test: headings, emphasis, links, nested and ordered lists, blockquotes, tables, syntax-highlighted code, inline math, display math, and a custom component all pass through the same MDX pipeline.
+
+[← All posts](/blog)

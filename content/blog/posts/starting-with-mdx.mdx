@@ -1,0 +1,47 @@
+[← All posts](/blog)
+
+`// field notes`
+
+# Starting with MDX
+
+*September 24, 2026 · 4 min read*
+
+This site now uses MDX, which means a page can read like Markdown while still using React components when the content needs them.
+
+It is a small setup with a useful payoff: writing stays simple, routes remain part of the App Router, and interactive examples can grow alongside the words.
+
+> Start with the smallest system that makes publishing easy.
+
+## Why it fits this site
+
+The writing and the interface live in the same project. That keeps the publishing loop short: write a file, review the page, and ship it with the rest of the site.
+
+- Markdown keeps ordinary articles easy to scan and edit.
+- React components can handle demos, diagrams, and interactive details.
+- App Router layouts provide navigation, metadata, and shared presentation.
+
+> **MDX in practice:** A callout can begin as an ordinary Markdown blockquote. If it ever needs interaction, it can become a component without moving the rest of the article.
+
+## A page stays simple
+
+A route can be a plain `page.mdx` file. Imports are only needed when the story calls for something beyond text.
+
+```mdx
+import Demo from "@/components/demo"
+
+# A useful note
+
+Write in Markdown, then add interaction when it helps.
+
+<Demo />
+```
+
+## What comes next
+
+1. Add individual routes as the collection of notes grows.
+2. Create shared components only when an article needs them twice.
+3. Keep the reading experience fast, focused, and easy to maintain.
+
+---
+
+[← All posts](/blog)
