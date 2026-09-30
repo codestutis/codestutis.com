@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     default: "Blog — codestutis",
     template: "%s — codestutis",
   },
-  description: "Field notes about building software and learning along the way.",
+  description: "Articles about systems, networking, and software engineering.",
 };
 
 export default function BlogLayout({
