@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { CursorGlow } from "@/app/_components/cursor-glow";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,8 +27,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
+        <CursorGlow />
         <div className="flex min-h-screen flex-col">
-          <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:px-10">
+          <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-6 sm:pl-10 sm:pr-24">
             <Link
               href="/"
               className="font-mono text-sm font-semibold tracking-tight focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"

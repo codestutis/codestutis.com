@@ -8,7 +8,7 @@ export default function Home() {
       <section className="grid gap-12 lg:grid-cols-[1fr_18rem] lg:items-end">
         <div>
           <p className="font-mono text-sm text-blue-600 dark:text-blue-400">
-            Software engineer · Greater Boston
+            Software Engineer · Greater Boston
           </p>
           <h1 className="mt-5 max-w-3xl text-5xl font-semibold leading-[1.02] tracking-[-0.05em] text-zinc-950 sm:text-7xl dark:text-zinc-50">
             Kestutis Biskis
@@ -86,7 +86,7 @@ export default function Home() {
               USGv6 certification, analyzing protocol behavior and working with
               vendors to resolve standards-compliance issues. I also build
               testbeds, automation, and documentation that have shortened
-              testing from several weeks to 3–4 days and reduced unnecessary
+              testing from several weeks to 3-4 days and reduced unnecessary
               debugging time by 70%.
             </p>
           </article>

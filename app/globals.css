@@ -25,6 +25,33 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.flashlight-darkness {
+  --flashlight-x: 50vw;
+  --flashlight-y: 50vh;
+  background: radial-gradient(
+    circle 10rem at var(--flashlight-x) var(--flashlight-y),
+    transparent 0%,
+    rgb(0 0 0 / 0.08) 48%,
+    rgb(0 0 0 / 0.82) 76%,
+    #000 100%
+  );
+}
+
+.flashlight-cursor {
+  display: none;
+}
+
+@media (pointer: fine) {
+  html.lights-out,
+  html.lights-out * {
+    cursor: none !important;
+  }
+
+  .flashlight-cursor {
+    display: block;
+  }
+}
+
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
