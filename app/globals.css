@@ -2,15 +2,15 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
-  color-scheme: light;
-  --background: #f5f8f8;
-  --foreground: #203c40;
-  --muted: #53696d;
-  --accent: #276b62;
-  --surface: #ffffff;
-  --line: #d5e0e0;
-  --soft: #e7efed;
-  --display: "Avenir Next", var(--font-geist-sans), sans-serif;
+  color-scheme: dark;
+  --background: #142034;
+  --foreground: #edf2fc;
+  --muted: #a8b8ce;
+  --accent: #a3c4ff;
+  --surface: #1d2d45;
+  --line: #34455e;
+  --soft: #293b55;
+  --display: var(--font-geist-sans), sans-serif;
 }
 @theme inline {
   --color-background: var(--background);
@@ -55,7 +55,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .project-art { position: relative; overflow: hidden; aspect-ratio: 5 / 3; border-bottom: 1px solid var(--line); }
 .project-art img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
 .project-card:hover img { transform: scale(1.035); }
-.project-open { position: absolute; right: 16px; bottom: 16px; display: grid; place-items: center; background: #ffffffda; border: 1px solid #ffffff; color: #203c40; border-radius: 50%; width: 32px; height: 32px; font-size: 18px; }
+.project-open { position: absolute; right: 16px; bottom: 16px; display: grid; place-items: center; background: #ffffffda; border: 1px solid #1d2d45; color: #203c40; border-radius: 50%; width: 32px; height: 32px; font-size: 18px; }
 .project-copy { padding: 26px; display: flex; flex: 1; flex-direction: column; }
 .project-copy h3 { font-family: var(--display); font-weight: 600; font-size: 20px; letter-spacing: -.5px; }
 .project-copy p { color: var(--muted); font-size: 13px; line-height: 1.85; margin-block: 12px 24px; }
@@ -84,3 +84,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .project-card:hover, .project-card:hover img { transform: none; }
 }
+
+.site-header { min-height: 90px; border-bottom: 1px solid var(--line); }
+.brand-symbol { background: #293e5b; color: #c1d6f7; border: 1px solid #486183; border-radius: 8px; font-family: var(--font-geist-mono); }
+.project-card { border-radius: 12px; }
+.project-art img { filter: saturate(.78) brightness(.88); }
+.project-card:hover { box-shadow: 0 12px 28px #050c1b50; }
