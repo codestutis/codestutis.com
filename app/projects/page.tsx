@@ -17,11 +17,11 @@ export default function ProjectsPage() {
         <div className="flex items-end justify-between border-b border-zinc-200 pb-4 dark:border-zinc-800">
           <h2
             id="all-projects-heading"
-            className="font-mono text-xs uppercase tracking-[0.18em] text-zinc-500"
+            className="font-mono text-xs uppercase tracking-[0.18em] text-muted"
           >
             All projects
           </h2>
-          <p className="font-mono text-xs text-zinc-500">
+          <p className="font-mono text-xs text-muted">
             {projectCount} {projectCount === 1 ? "project" : "projects"}
           </p>
         </div>

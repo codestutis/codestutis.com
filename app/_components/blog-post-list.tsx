@@ -38,7 +38,7 @@ export function BlogPostList({ posts }: BlogPostListProps) {
             className="border-b border-zinc-200 py-8 dark:border-zinc-800"
           >
             <article>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs text-zinc-500">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs text-muted">
                 <time dateTime={post.publishedAt}>{post.displayDate}</time>
                 <span aria-hidden="true">·</span>
                 <span>{post.readTime}</span>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-theme="dark" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <header className="site-header">

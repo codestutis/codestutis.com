@@ -41,7 +41,7 @@ export function TagFilter({ tags, activeTag, onChange }: TagFilterProps) {
 
   return (
     <div className="mt-6">
-      <p className="font-mono text-xs uppercase tracking-[0.16em] text-zinc-500">
+      <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">
         Filter by tag
       </p>
       <div
@@ -87,7 +87,7 @@ export function TagFilter({ tags, activeTag, onChange }: TagFilterProps) {
             value={searchQuery}
             onChange={(event) => searchTags(event.target.value)}
             placeholder="Search tags"
-            className="w-full rounded-full border border-zinc-200 bg-white px-3 py-1.5 font-mono text-xs text-zinc-700 outline-none placeholder:text-zinc-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
+            className="w-full rounded-full border border-zinc-200 bg-white px-3 py-1.5 font-mono text-xs text-zinc-700 outline-none placeholder:text-muted focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
           />
           <datalist id={`${tagListId}-options`}>
             {sortedTags.map((tag) => (

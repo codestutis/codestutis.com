@@ -47,6 +47,21 @@
 .desk :global(.project-copy h3) { font-size: 17px; }
 .desk :global(.project-copy p) { font-size: 12px; }
 .desk :global(.project-tags li) { font-size: 9px; padding: 4px 7px; }
+@media (prefers-color-scheme: light) {
+  .avatar { background: var(--soft); border-color: #a9bdd5; box-shadow: inset 0 0 0 6px #f8faff, 8px 8px 0 #d5dfed; }
+  .avatar > span { color: var(--accent); }
+  .avatar small { color: var(--muted); }
+  .cursor, .profile h1 > span, .tabs button span { color: #9a4d20; }
+  .role { color: #344962; }
+  .welcome h2 span { color: var(--muted); }
+  .windowBar { background: #eaf0f8; color: var(--muted); }
+  .windowBar > span:first-child { color: #637995; }
+  .tabs button[aria-selected="true"] { border-color: var(--accent); color: var(--accent); background: var(--soft); }
+  .tabs button:hover { color: var(--foreground); }
+  .chip { background: var(--soft); border-color: #8da6c4; box-shadow: 0 0 0 7px #f3f6fb, 0 0 0 8px #b7c8dd; color: var(--accent); }
+  .circuitRing { border-color: #a9bdd5; }
+  .circuitRing:nth-child(2) { border-color: #c1d0e2; }
+}
 @media (max-width: 1000px) {
   .workspace { grid-template-columns: 210px minmax(0,1fr); gap: 36px; }
   .panelGrid { grid-template-columns: 1fr; }

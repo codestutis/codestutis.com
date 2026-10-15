@@ -58,7 +58,7 @@ const components = {
   ol: (props) => (
     <ol
       {...props}
-      className="mt-5 list-decimal space-y-3 pl-6 leading-7 text-zinc-700 marker:font-mono marker:text-zinc-400 dark:text-zinc-300"
+      className="mt-5 list-decimal space-y-3 pl-6 leading-7 text-zinc-700 marker:font-mono marker:text-muted dark:text-zinc-300"
     />
   ),
   blockquote: (props) => (
@@ -92,7 +92,7 @@ const components = {
     />
   ),
   del: (props) => (
-    <del {...props} className="text-zinc-500 decoration-zinc-400" />
+    <del {...props} className="text-muted decoration-zinc-400" />
   ),
   hr: (props) => (
     <hr
@@ -100,7 +100,7 @@ const components = {
       className="my-16 border-0 border-t border-zinc-200 dark:border-zinc-800"
     />
   ),
-  em: (props) => <em {...props} className="text-sm text-zinc-500" />,
+  em: (props) => <em {...props} className="text-sm text-muted" />,
   Callout,
 } satisfies MDXComponents;
 

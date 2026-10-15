@@ -27,11 +27,11 @@ export default function BlogIndex() {
         <div className="flex items-end justify-between border-b border-zinc-200 pb-4 dark:border-zinc-800">
           <h2
             id="all-posts-heading"
-            className="font-mono text-xs uppercase tracking-[0.18em] text-zinc-500"
+            className="font-mono text-xs uppercase tracking-[0.18em] text-muted"
           >
             All posts
           </h2>
-          <p className="font-mono text-xs text-zinc-500">
+          <p className="font-mono text-xs text-muted">
             {postCount} {postCount === 1 ? "post" : "posts"}
           </p>
         </div>
