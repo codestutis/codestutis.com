@@ -1,40 +1,44 @@
-export function SocialLinks() {
+import { Award } from "lucide-react";
+import Image from "next/image";
+import type { HomeContent } from "@/content/home";
+
+export function SocialLinks({ links }: { links: HomeContent["social_links"] }) {
   return <div className="social-links">
-    <a href="mailto:kestutis.biskis@codestutis.com">Say hello <span aria-hidden="true">↗</span></a>
-    <a href="https://github.com/codestutis" target="_blank" rel="noreferrer">GitHub ↗</a>
-    <a href="https://www.linkedin.com/in/kestutis-biskis" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    {links.map((link) => <a key={link.href} href={link.href} target={link.external ? "_blank" : undefined} rel={link.external ? "noreferrer" : undefined}>{link.label} <span aria-hidden="true">↗</span></a>)}
   </div>;
 }
 
-export function Experience() {
-  return <div className="profile-content">
-    <p className="eyebrow">Experience · May 2025 — Present</p>
-    <h3>Making networks <br />play nicely.</h3>
-    <a className="organization" href="https://www.iol.unh.edu/" target="_blank" rel="noreferrer">UNH InterOperability Laboratory ↗</a>
-    <p>Network Testing Technician. Testing hosts, routers, and firewalls for IPv6 Ready Logo and USGv6 certification.</p>
-    <details><summary>A little more about the work</summary><p>I analyze protocol behavior, work with vendors on standards compliance, and build testbeds, automation, and documentation. That work has shortened testing from several weeks to 3–4 days and reduced unnecessary debugging time by 70%.</p></details>
-  </div>;
+export function Experience({ items }: { items: HomeContent["experience"] }) {
+  return <>{items.map((item) => <div className="profile-content" key={`${item.organization}-${item.title}`}>
+    <p className="card-meta">{item.period}</p>
+    <a className="organization organization-with-logo" href={item.organization_url} target="_blank" rel="noreferrer"><Image className="organization-logo iol-logo" src={item.logo} alt="" width={item.logo_width} height={item.logo_height} unoptimized />{item.organization} ↗</a>
+    <h3>{item.title}</h3>
+    <p className="card-summary">{item.summary}</p>
+    <p>{item.details}</p>
+    <ul className="card-tags" aria-label={`${item.title} focus`}>{item.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+  </div>)}</>;
 }
 
-export function Education() {
-  return <div className="profile-content">
-    <p className="eyebrow">Education · Class of 2028</p>
-    <h3>Always a student.</h3>
-    <a className="organization" href="https://www.unh.edu/" target="_blank" rel="noreferrer">University of New Hampshire ↗</a>
-    <p>B.S. in Computer Science<br />Expected May 2028 · GPA 3.5 · Dean&apos;s List</p>
-    <details><summary>What I&apos;m studying</summary><p>Algorithms, systems, computer organization, software engineering, networking, and operating systems.</p></details>
-  </div>;
+export function Education({ items }: { items: HomeContent["education"] }) {
+  return <>{items.map((item) => <div className="profile-content" key={`${item.organization}-${item.degree}`}>
+    <p className="card-meta">{item.period}</p>
+    <a className="organization organization-with-logo" href={item.organization_url} target="_blank" rel="noreferrer"><Image className="organization-logo unh-logo" src={item.logo} alt="" width={item.logo_width} height={item.logo_height} unoptimized />{item.organization} ↗</a>
+    <h3>{item.degree}</h3>
+    <p className="credential"><Award size={13} aria-hidden="true" /> {item.credential}</p>
+    <dl className="education-details">
+      <div><dt>Major</dt><dd>{item.major}</dd></div>
+      <div><dt>Coursework</dt><dd>{item.coursework}</dd></div>
+    </dl>
+  </div>)}</>;
 }
 
-export function Skills() {
+export function Skills({ groups }: { groups: HomeContent["skill_groups"] }) {
   return <div className="profile-content">
-    <p className="eyebrow">Skills & tools</p>
-    <h3>From packets <br />to pixels.</h3>
     <dl className="skill-groups">
-      <div><dt>Systems</dt><dd>C · Go · Linux · POSIX</dd></div>
-      <div><dt>Networks</dt><dd>IPv6 · TCP/UDP · Cybersecurity</dd></div>
-      <div><dt>Applications</dt><dd>React · TypeScript · PostgreSQL</dd></div>
-      <div><dt>Infrastructure</dt><dd>Docker · Prometheus · Grafana</dd></div>
+      {groups.map((group) => <div key={group.title}>
+        <dt>{group.title}</dt>
+        <dd><ul className="skill-badges">{group.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></dd>
+      </div>)}
     </dl>
   </div>;
 }

@@ -1,0 +1,24 @@
+export const meta = {
+  name: "Queens Solver",
+  description: "A Go solver for LinkedIn Queens puzzles using constraint tracking and backtracking.",
+  details: "Searches for placements that satisfy row, column, color-region, and adjacent-diagonal rules, with tests for the solver.",
+  tags: ["Go", "Algorithms", "Backtracking", "Puzzles"],
+  pinned: false,
+  image: "/projects/queens-solver.svg",
+  sourceUrl: "https://github.com/codestutis/Queens",
+};
+
+## Overview
+
+Queens Solver models the constraints behind LinkedIn's Queens puzzle and searches every valid placement. The solver records solutions in a board representation that can be printed or checked in tests.
+
+## The challenge
+
+A brute-force search grows quickly unless invalid branches are rejected as soon as possible. Column and color-region usage are tracked directly, while adjacent diagonals are checked before each recursive step.
+
+## Highlights
+
+- Places exactly one queen in each row through recursive search.
+- Tracks occupied columns and color regions for constant-time rejection.
+- Prevents queens from touching on adjacent diagonals.
+- Records complete solutions and includes automated solver tests.

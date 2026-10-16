@@ -1,31 +1,34 @@
-export const posts = [
-  {
-    slug: "mdx-features-and-latex",
-    title: "MDX features, from Markdown to math",
-    description:
-      "A practical tour of Markdown, GitHub-Flavored Markdown, React components, code, and LaTeX-style equations in one post.",
-    publishedAt: "2026-09-25",
-    displayDate: "September 25, 2026",
-    readTime: "8 min read",
-    tags: ["MDX", "LaTeX", "KaTeX"],
-    load: () => import("./mdx-features-and-latex.mdx"),
-  },
-  {
-    slug: "starting-with-mdx",
-    title: "Starting with MDX",
-    description:
-      "Why this site keeps writing close to the code while leaving room for interactive examples.",
-    publishedAt: "2026-09-24",
-    displayDate: "September 24, 2026",
-    readTime: "4 min read",
-    tags: ["MDX", "Next.js", "Writing"],
-    load: () => import("./starting-with-mdx.mdx"),
-  },
-] as const;
+import { existsSync, readdirSync } from "node:fs";
+import { join } from "node:path";
+import type { ComponentType } from "react";
 
-export type BlogPost = (typeof posts)[number];
-export type BlogPostSlug = BlogPost["slug"];
+export type BlogPostMeta = { title: string; description: string; publishedAt: string; displayDate: string; readTime: string; tags: string[] };
+export type BlogPost = BlogPostMeta & { slug: string };
+const postsDirectory = join(process.cwd(), "content/blog/posts");
+const isPublishedFile = (filename: string) => filename.endsWith(".mdx") && !filename.startsWith("_");
+const filenames = () => readdirSync(postsDirectory).filter(isPublishedFile);
 
-export function getPost(slug: string) {
-  return posts.find((post) => post.slug === slug);
+function toPost(filename: string, meta: BlogPostMeta): BlogPost {
+  return { ...meta, slug: filename.slice(0, -4) };
+}
+
+async function loadModule(filename: string) {
+  return import(`./${filename}`) as Promise<{ default: ComponentType; meta: BlogPostMeta }>;
+}
+
+export async function getPosts(): Promise<BlogPost[]> {
+  const posts = await Promise.all(filenames().map(async (filename) => toPost(filename, (await loadModule(filename)).meta)));
+  return posts.sort((left, right) => right.publishedAt.localeCompare(left.publishedAt));
+}
+
+export async function getPost(slug: string): Promise<BlogPost | undefined> {
+  const filename = `${slug}.mdx`;
+  if (!/^[a-z0-9-]+\.mdx$/.test(filename) || !existsSync(join(postsDirectory, filename))) return undefined;
+  return toPost(filename, (await loadModule(filename)).meta);
+}
+
+export async function getPostContent(slug: string) {
+  const filename = `${slug}.mdx`;
+  if (!/^[a-z0-9-]+\.mdx$/.test(filename) || !existsSync(join(postsDirectory, filename))) return undefined;
+  return (await loadModule(filename)).default;
 }

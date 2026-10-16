@@ -1,0 +1,23 @@
+export const meta = {
+  name: "Chess Mistakes Trainer",
+  description: "An asynchronous Go service that analyzes chess games with Stockfish and turns mistakes into interactive puzzles.",
+  details: "Built with PostgreSQL, Docker, React, and TypeScript, with observability through Prometheus, Grafana, and OpenTelemetry.",
+  tags: ["Go", "PostgreSQL", "React", "Observability"],
+  pinned: true,
+  image: "/projects/chess-mistakes-trainer.svg",
+};
+
+## Overview
+
+Chess Mistakes Trainer turns completed games into focused practice. A Go service coordinates engine analysis, stores the resulting positions, and serves the mistakes back through an interactive web interface.
+
+## The challenge
+
+Stockfish analysis is computationally expensive and does not fit comfortably inside a normal request-response cycle. The project separates analysis from interaction so games can be processed asynchronously while the application remains responsive.
+
+## Highlights
+
+- Runs Stockfish analysis as asynchronous background work.
+- Stores games, evaluations, and generated training positions in PostgreSQL.
+- Presents mistakes as interactive puzzles in a React and TypeScript interface.
+- Uses Prometheus, Grafana, and OpenTelemetry to expose system behavior.

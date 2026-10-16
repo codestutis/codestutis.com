@@ -1,8 +1,9 @@
 import { ProjectGallery } from "@/app/_components/project-gallery";
-import { projects } from "@/content/projects";
+import { getProjects } from "@/content/projects";
 
-export default function ProjectsPage() {
-  const projectCount: number = projects.length;
+export default async function ProjectsPage() {
+  const projects = await getProjects();
+  const projectCount = projects.length;
 
   return (
     <>

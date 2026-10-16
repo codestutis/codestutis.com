@@ -1,0 +1,24 @@
+export const meta = {
+  name: "LAN Chat App",
+  description: "A multithreaded C application for peer discovery and messaging between devices on a local network.",
+  details: "Uses UDP discovery, TCP messaging, a custom application protocol, and a terminal interface.",
+  tags: ["C", "Networking", "POSIX", "Concurrency"],
+  pinned: true,
+  image: "/projects/lan-chat-app.svg",
+  sourceUrl: "https://github.com/codestutis/chatstutis",
+};
+
+## Overview
+
+LAN Chat App is a peer-to-peer terminal chat program written in C. Devices discover one another automatically on the local network, then establish direct connections for conversations without a central server.
+
+## The challenge
+
+Discovery, incoming connections, message history, and terminal rendering all need to progress independently without corrupting shared state. The design uses explicit packet formats and concurrent workers to keep those responsibilities separate.
+
+## Highlights
+
+- Broadcasts UDP discovery packets at regular intervals and expires inactive peers.
+- Uses TCP connections and a versioned packet format for chat messages.
+- Accepts incoming connections on a dedicated POSIX thread.
+- Maintains bounded per-peer message history for the terminal interface.

@@ -1,0 +1,24 @@
+export const meta = {
+  name: "IP Address Inspector",
+  description: "A small Linux utility that displays the IPv4 and IPv6 addresses assigned to local network interfaces.",
+  details: "Written in C around getifaddrs, getnameinfo, linked lists, and explicit memory management.",
+  tags: ["C", "Linux", "IPv6", "Systems"],
+  pinned: false,
+  image: "/projects/ip-address-inspector.svg",
+  sourceUrl: "https://github.com/codestutis/ip_addrs",
+};
+
+## Overview
+
+IP Address Inspector is a compact systems utility for enumerating local interfaces and presenting their numeric addresses. It expands the getifaddrs manual-page example into structured, readable output for both IPv4 and IPv6.
+
+## The challenge
+
+The operating-system interface returns one record per address rather than one complete record per network interface. The program groups those records into its own linked data model and releases every allocation before exiting.
+
+## Highlights
+
+- Enumerates network interfaces with the Linux getifaddrs API.
+- Converts socket addresses to numeric IPv4 and IPv6 strings.
+- Groups multiple addresses under their corresponding interface.
+- Exercises linked-list construction and explicit resource cleanup in C.

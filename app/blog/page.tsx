@@ -1,17 +1,9 @@
 import { BlogPostList } from "@/app/_components/blog-post-list";
-import { posts } from "@/content/blog/posts";
+import { getPosts } from "@/content/blog/posts";
 
-export default function BlogIndex() {
-  const postCount: number = posts.length;
-  const postSummaries = posts.map((post) => ({
-    slug: post.slug,
-    title: post.title,
-    description: post.description,
-    publishedAt: post.publishedAt,
-    displayDate: post.displayDate,
-    readTime: post.readTime,
-    tags: post.tags,
-  }));
+export default async function BlogIndex() {
+  const posts = await getPosts();
+  const postCount = posts.length;
 
   return (
     <>
@@ -36,7 +28,7 @@ export default function BlogIndex() {
           </p>
         </div>
 
-        <BlogPostList posts={postSummaries} />
+        <BlogPostList posts={posts} />
       </section>
     </>
   );

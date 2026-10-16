@@ -1,0 +1,68 @@
+[profile]
+first_name = "Kestutis"
+last_name = "Biskis"
+role = "Software engineer.\nStudent. Systems person."
+bio = "I like figuring out how things work, then building something with what I learn."
+location = "Greater Boston"
+current_work = "UNH-IOL"
+studying = "Computer Science @ UNH"
+
+[intro]
+eyebrow = "A small corner of the internet"
+title = "Under the hood."
+accent_title = "And on the screen."
+description = "Systems programming, IPv6 interoperability, cybersecurity, and the occasional full-stack side quest."
+
+[[social_links]]
+label = "Say hello"
+href = "mailto:kestutis.biskis@codestutis.com"
+
+[[social_links]]
+label = "GitHub"
+href = "https://github.com/codestutis"
+external = true
+
+[[social_links]]
+label = "LinkedIn"
+href = "https://www.linkedin.com/in/kestutis-biskis"
+external = true
+
+[[experience]]
+organization = "UNH InterOperability Laboratory"
+organization_url = "https://www.iol.unh.edu/"
+logo = "/logos/unh-shield.svg"
+logo_width = 28
+logo_height = 32
+period = "May 2025 — Present"
+title = "Network Testing Technician"
+summary = "I test hosts, routers, and firewalls for IPv6 Ready Logo and USGv6 certification, then turn tricky protocol behavior into clear next steps for vendors."
+details = "I build testbeds, automation, and documentation that have shortened testing from several weeks to 3–4 days and reduced unnecessary debugging time by 70%."
+tags = ["IPv6", "Interoperability", "Network testing"]
+
+[[education]]
+organization = "University of New Hampshire"
+organization_url = "https://www.unh.edu/"
+logo = "/logos/unh-shield.svg"
+logo_width = 28
+logo_height = 32
+period = "Class of 2028"
+degree = "B.S. in Computer Science"
+credential = "Expected May 2028 · GPA 3.5 · Dean's List"
+major = "Computer Science"
+coursework = "Algorithms, systems, computer organization, software engineering, networking, and operating systems."
+
+[[skill_groups]]
+title = "Systems"
+skills = ["C", "Go", "Linux", "POSIX"]
+
+[[skill_groups]]
+title = "Networks"
+skills = ["IPv6", "TCP/UDP", "Cybersecurity"]
+
+[[skill_groups]]
+title = "Applications"
+skills = ["React", "TypeScript", "PostgreSQL"]
+
+[[skill_groups]]
+title = "Infrastructure"
+skills = ["Docker", "Prometheus", "Grafana"]

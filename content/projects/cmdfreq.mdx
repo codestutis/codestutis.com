@@ -1,0 +1,24 @@
+export const meta = {
+  name: "cmdfreq",
+  description: "A Go command-line tool that ranks the commands and subcommands used most often in shell history.",
+  details: "Supports Bash and Zsh histories, alias resolution, repeatable installation, and macOS, Linux, and WSL.",
+  tags: ["Go", "CLI", "Bash", "Zsh"],
+  pinned: false,
+  image: "/projects/cmdfreq.svg",
+  sourceUrl: "https://github.com/codestutis/cmdfreq",
+};
+
+## Overview
+
+cmdfreq makes shell habits visible. It parses Bash or Zsh history, groups repeated commands, and prints a ranked summary that can also drill into the arguments used with a particular command.
+
+## The challenge
+
+Shell histories vary in format and configuration, and aliases can hide the commands a person actually runs. The tool normalizes those inputs while keeping the default output small enough to be useful at a glance.
+
+## Highlights
+
+- Ranks the most frequently used commands with a configurable result count.
+- Breaks down common arguments for a command such as git.
+- Optionally resolves aliases before counting usage.
+- Includes tested, repeatable installation for Bash and Zsh environments.

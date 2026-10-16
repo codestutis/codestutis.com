@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projects, type Project } from "@/content/projects";
+import type { Project } from "@/content/projects";
 
-export function ProjectCards({ items = projects }: { items?: readonly Project[] }) {
+export function ProjectCards({ items }: { items: readonly Project[] }) {
   return (
     <div className="project-grid">
       {items.map((project) => (
         <Link key={project.slug} href={`/projects/${project.slug}`} className="project-card">
           <article>
             <div className="project-art">
-              <Image src={`/projects/${project.slug}.svg`} alt="" width={800} height={480} />
+              {project.image ? <Image src={project.image} alt="" width={800} height={480} /> : <div className="project-fallback" aria-hidden="true">{project.name.slice(0, 1)}</div>}
               <span className="project-open" aria-hidden="true">↗</span>
             </div>
             <div className="project-copy">
