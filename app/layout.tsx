@@ -12,6 +12,10 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   title: "Kestutis Biskis — Software Engineer",
   description: "Software engineer working across systems programming, networking, cybersecurity, and full-stack software.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+  },
 };
 
 function GitHubIcon() {
