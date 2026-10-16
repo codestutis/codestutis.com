@@ -48,16 +48,16 @@
     "semantic_hash": "9d5082ffd9c5419312a6c4e630c6daa5"
   },
   "app/layout.tsx": {
-    "mtime": 1792100261.2976406,
-    "seen": 1792124582.2094631,
-    "ast_hash": "38a74fec9a8c2c526bdcaa4e34f0add2",
-    "semantic_hash": "38a74fec9a8c2c526bdcaa4e34f0add2"
+    "mtime": 1792128130.328932,
+    "seen": 1792128139.793963,
+    "ast_hash": "99b7c8356e2682b03bacb322a6005e7f",
+    "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1792123399.8728201,
-    "seen": 1792124582.2094631,
+    "mtime": 1792127923.175553,
+    "seen": 1792127931.846367,
     "ast_hash": "99702a3fe69f29b834949bedcfd361db",
-    "semantic_hash": "99702a3fe69f29b834949bedcfd361db"
+    "semantic_hash": ""
   },
   "app/projects/[slug]/page.tsx": {
     "mtime": 1792123442.3872454,
@@ -84,8 +84,8 @@
     "semantic_hash": "0f1c28f5fc4edd9ee705cf4ba6c507ed"
   },
   "content/home.ts": {
-    "mtime": 1792123513.014642,
-    "seen": 1792124582.2094662,
+    "mtime": 1792124958.6671872,
+    "seen": 1792125208.481728,
     "ast_hash": "a89cf8d731e2294dc0fcd45de11f5732",
     "semantic_hash": "a89cf8d731e2294dc0fcd45de11f5732"
   },
@@ -233,12 +233,6 @@
     "ast_hash": "2aaafa6a49b6563925fe440891e32717",
     "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
   },
-  "public/logos/unh-iol.svg": {
-    "mtime": 1792103233.828907,
-    "seen": 1792124582.209482,
-    "ast_hash": "69c5484155bef95e9637bed8fc353307",
-    "semantic_hash": "69c5484155bef95e9637bed8fc353307"
-  },
   "public/logos/unh.svg": {
     "mtime": 1792103233.8095767,
     "seen": 1792124582.209483,
@@ -306,9 +300,9 @@
     "semantic_hash": ""
   },
   "public/logos/unh-shield.svg": {
-    "mtime": 1792124891.4867692,
-    "seen": 1792124915.970953,
-    "ast_hash": "eee6bf82ff704f331ab1029d17febd43",
+    "mtime": 1792125233.6661131,
+    "seen": 1792125235.91488,
+    "ast_hash": "37a4d72c6dd387c3c2418d811cf24daf",
     "semantic_hash": ""
   }
 }

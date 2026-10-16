@@ -1,9 +1,7 @@
 {
   "0": "Tooling Configuration",
   "1": "Project Catalog",
-  "2": "Homepage Content",
   "3": "TypeScript Configuration",
-  "5": "Blog Browsing",
   "6": "Blog Content Loader",
   "7": "Runtime Dependencies",
   "8": "Development Tooling",
@@ -24,7 +22,6 @@
   "24": "GitHub Pages Deployment",
   "25": "Document Icon",
   "26": "Globe Icon",
-  "27": "UNH IOL Logo",
   "28": "Next.js Logo",
   "29": "Chess Trainer Artwork",
   "30": "cmdfreq Artwork",

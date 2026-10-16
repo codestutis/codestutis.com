@@ -1,27 +1,27 @@
 # Graph Report - codestutis.com  (2026-10-16)
 
 ## Corpus Check
-- 38 files · ~10,015 words
+- 38 files · ~8,982 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: .css 2, (none) 1, .ico 1)
 
 ## Summary
-- 201 nodes · 256 edges · 39 communities (11 shown, 28 thin omitted)
+- 202 nodes · 261 edges · 38 communities (11 shown, 27 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c3f94fda`
+- Built from commit: `a6a50d2b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Tooling Configuration
 - Project Catalog
-- Homepage Content
+- app/page.tsx
 - TypeScript Configuration
 - app/layout.tsx
-- Blog Browsing
+- blog-post-list.tsx
 - Blog Content Loader
 - Runtime Dependencies
 - Development Tooling
@@ -43,7 +43,7 @@
 - GitHub Pages Deployment
 - Document Icon
 - Globe Icon
-- UNH IOL Logo
+- mdx-components.tsx
 - Next.js Logo
 - Chess Trainer Artwork
 - cmdfreq Artwork
@@ -53,7 +53,6 @@
 - Vercel Logo
 - Window Icon
 - Portfolio design options
-- mdx-components.tsx
 - scripts
 
 ## God Nodes (most connected - your core abstractions)
@@ -83,7 +82,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (39 total, 28 thin omitted)
+## Communities (38 total, 27 thin omitted)
 
 ### Community 0 - "Tooling Configuration"
 Cohesion: 0.07
@@ -93,7 +92,7 @@ Nodes (25): metadata, eslintConfig, nextConfig, withMDX, name, private, version,
 Cohesion: 0.15
 Nodes (21): ProjectCards(), ProjectGallery(), ProjectGalleryProps, TagFilterProps, ProjectsPage(), dynamicParams, generateMetadata(), generateStaticParams() (+13 more)
 
-### Community 2 - "Homepage Content"
+### Community 2 - "app/page.tsx"
 Cohesion: 0.15
 Nodes (16): Education(), Experience(), Skills(), SocialLinks(), Home(), metadata, home, HomeContent (+8 more)
 
@@ -102,10 +101,10 @@ Cohesion: 0.11
 Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
 
 ### Community 4 - "app/layout.tsx"
-Cohesion: 0.33
-Nodes (3): geistMono, geistSans, metadata
+Cohesion: 0.32
+Nodes (6): geistMono, geistSans, GitHubIcon(), LinkedInIcon(), metadata, RootLayout()
 
-### Community 5 - "Blog Browsing"
+### Community 5 - "blog-post-list.tsx"
 Cohesion: 0.31
 Nodes (5): BlogIndex(), BlogPostList(), BlogPostListProps, BlogPostSummary, TagFilter()
 
@@ -125,26 +124,26 @@ Nodes (10): devDependencies, eslint, eslint-config-next, @shikijs/rehype, tailwi
 Cohesion: 0.33
 Nodes (5): Inspiration, Portfolio design options, Preview, Shared changes, Validation
 
-### Community 38 - "scripts"
+### Community 37 - "scripts"
 Cohesion: 0.40
 Nodes (5): scripts, build, dev, lint, start
 
 ## Knowledge Gaps
-- **42 isolated node(s):** `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx`, `react-dom`, `rehype-katex` (+37 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 128 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **41 isolated node(s):** `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx`, `react-dom`, `rehype-katex` (+36 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 126 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `next` connect `Homepage Content` to `Tooling Configuration`, `Project Catalog`, `app/layout.tsx`, `Blog Browsing`, `Blog Content Loader`?**
-  _High betweenness centrality (0.197) - this node is a cross-community bridge._
+- **Why does `next` connect `app/page.tsx` to `Tooling Configuration`, `Project Catalog`, `app/layout.tsx`, `blog-post-list.tsx`, `Blog Content Loader`?**
+  _High betweenness centrality (0.193) - this node is a cross-community bridge._
 - **What connects `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx` to the rest of the system?**
-  _42 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _41 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Tooling Configuration` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
-- **Why does `react` connect `Project Catalog` to `Tooling Configuration`, `mdx-components.tsx`, `Blog Browsing`, `Blog Content Loader`?**
-  _High betweenness centrality (0.137) - this node is a cross-community bridge._
+- **Why does `react` connect `Project Catalog` to `Tooling Configuration`, `mdx-components.tsx`, `blog-post-list.tsx`, `Blog Content Loader`?**
+  _High betweenness centrality (0.136) - this node is a cross-community bridge._
 - **Should `Project Catalog` be split into smaller, more focused modules?**
   _Cohesion score 0.14814814814814814 - nodes in this community are weakly interconnected._
 - **Why does `dependencies` connect `Runtime Dependencies` to `Tooling Configuration`?**

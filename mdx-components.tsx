@@ -70,25 +70,25 @@ const components = {
   pre: ({ className, ...props }) => (
     <pre
       {...props}
-      className={`${className ?? ""} mt-6 overflow-x-auto rounded-xl p-5 font-mono text-sm leading-7 ring-1 ring-black/10 dark:ring-white/10`}
+      className={`${className ?? ""} mdx-code-block`}
     />
   ),
   code: (props) => <code {...props} className="font-mono text-[0.9em]" />,
   table: (props) => (
-    <div className="mt-6 overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
-      <table {...props} className="w-full border-collapse text-left text-sm" />
+    <div className="mdx-table-frame">
+      <table {...props} className="mdx-table" />
     </div>
   ),
   th: (props) => (
     <th
       {...props}
-      className="border-b border-zinc-200 bg-zinc-100 px-4 py-3 font-semibold text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
+      className="mdx-table-heading"
     />
   ),
   td: (props) => (
     <td
       {...props}
-      className="border-b border-zinc-100 px-4 py-3 text-zinc-700 last:border-b-0 dark:border-zinc-900 dark:text-zinc-300"
+      className="mdx-table-cell"
     />
   ),
   del: (props) => (
