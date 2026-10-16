@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <header className="site-header">
-          <Link href="/" className="wordmark"><span className="brand-symbol" aria-hidden="true">k.</span> codestutis</Link>
+          <Link href="/" className="wordmark"><span className="brand-symbol" aria-hidden="true">k.</span> codestutis.com</Link>
           <nav aria-label="Main navigation"><Link href="/">About</Link><Link href="/projects">Projects</Link><Link href="/blog">Blog</Link></nav>
         </header>
         <main id="main"><Suspense fallback={children}><PageTransition>{children}</PageTransition></Suspense></main>

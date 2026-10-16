@@ -8,8 +8,8 @@ export type HomeContent = {
   profile: { first_name: string; last_name: string; role: string; bio: string; location: string; current_work: string; studying: string };
   intro: { eyebrow: string; title: string; accent_title: string; description: string };
   social_links: Array<{ label: string; href: string; external?: boolean }>;
-  experience: Array<{ organization: string; organization_url: string; logo: string; logo_width: number; logo_height: number; period: string; title: string; summary: string; details: string; tags: string[] }>;
-  education: Array<{ organization: string; organization_url: string; logo: string; logo_width: number; logo_height: number; period: string; degree: string; credential: string; major: string; coursework: string }>;
+  experience: Array<{ organization: string; organization_url: string; period: string; title: string; summary: string; details: string; tags: string[] }>;
+  education: Array<{ organization: string; organization_url: string; period: string; degree: string; credential: string; major: string; coursework: string }>;
   skill_groups: Array<{ title: string; skills: string[] }>;
 };
 

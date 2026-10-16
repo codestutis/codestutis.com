@@ -33,7 +33,7 @@
   --font-mono: var(--font-geist-mono);
 }
 html { scroll-behavior: smooth; }
-body { margin: 0; background-color: var(--background); background-image: radial-gradient(circle, color-mix(in srgb, var(--accent) 10%, transparent) 1px, transparent 1px); background-size: 22px 22px; color: var(--foreground); font-family: var(--font-geist-sans), sans-serif; }
+body { margin: 0; background-color: var(--background); background-image: radial-gradient(circle, color-mix(in srgb, var(--accent) 10%, transparent) 1px, transparent 1px); background-size: 22px 22px; background-attachment: fixed; color: var(--foreground); font-family: var(--font-geist-sans), sans-serif; }
 html { scrollbar-color: color-mix(in srgb, var(--muted) 42%, transparent) transparent; scrollbar-width: thin; }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }

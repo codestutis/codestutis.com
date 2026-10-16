@@ -6,10 +6,10 @@
     "semantic_hash": "940e811182d1bf73d959ec2758b4954b"
   },
   "app/_components/profile-content.tsx": {
-    "mtime": 1792123399.845788,
-    "seen": 1792124582.209457,
-    "ast_hash": "f2606abc605ed869aa11d05290195a3b",
-    "semantic_hash": "f2606abc605ed869aa11d05290195a3b"
+    "mtime": 1792171899.3221757,
+    "seen": 1792171917.3090749,
+    "ast_hash": "81d7887282c1646c531b6692b9ad2864",
+    "semantic_hash": ""
   },
   "app/_components/project-cards.tsx": {
     "mtime": 1792123700.717524,
@@ -48,9 +48,9 @@
     "semantic_hash": "9d5082ffd9c5419312a6c4e630c6daa5"
   },
   "app/layout.tsx": {
-    "mtime": 1792160771.1126597,
-    "seen": 1792160779.775032,
-    "ast_hash": "105647d01a7b06daa51fb885ee1005b9",
+    "mtime": 1792168275.5272279,
+    "seen": 1792171346.1447198,
+    "ast_hash": "c3e3dfccca63f422b2e07905b7071b0d",
     "semantic_hash": ""
   },
   "app/page.tsx": {
@@ -84,10 +84,10 @@
     "semantic_hash": "0f1c28f5fc4edd9ee705cf4ba6c507ed"
   },
   "content/home.ts": {
-    "mtime": 1792124958.6671872,
-    "seen": 1792125208.481728,
-    "ast_hash": "a89cf8d731e2294dc0fcd45de11f5732",
-    "semantic_hash": "a89cf8d731e2294dc0fcd45de11f5732"
+    "mtime": 1792171899.4013329,
+    "seen": 1792171917.309089,
+    "ast_hash": "907fa61f6bc78f97acbac9bacd32146d",
+    "semantic_hash": ""
   },
   "content/projects/index.ts": {
     "mtime": 1792123700.6969683,
@@ -221,30 +221,6 @@
     "ast_hash": "420270d5842cd724c699473a709516e6",
     "semantic_hash": "420270d5842cd724c699473a709516e6"
   },
-  "public/file.svg": {
-    "mtime": 1790273830.946381,
-    "seen": 1792124582.209481,
-    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
-    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
-  },
-  "public/globe.svg": {
-    "mtime": 1790273830.947554,
-    "seen": 1792124582.209482,
-    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
-    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
-  },
-  "public/logos/unh.svg": {
-    "mtime": 1792103233.8095767,
-    "seen": 1792124582.209483,
-    "ast_hash": "dc1d75bc056769b1ae35be1e797d0f01",
-    "semantic_hash": "dc1d75bc056769b1ae35be1e797d0f01"
-  },
-  "public/next.svg": {
-    "mtime": 1790273830.9475799,
-    "seen": 1792124582.209484,
-    "ast_hash": "8e061864f388b47f33a1c3780831193e",
-    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
-  },
   "public/projects/chess-mistakes-trainer.svg": {
     "mtime": 1792099369.8193057,
     "seen": 1792124582.209484,
@@ -275,18 +251,6 @@
     "ast_hash": "8d2784418d147ce6e69b95dfa425c362",
     "semantic_hash": "8d2784418d147ce6e69b95dfa425c362"
   },
-  "public/vercel.svg": {
-    "mtime": 1790273830.947576,
-    "seen": 1792124582.209488,
-    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
-    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
-  },
-  "public/window.svg": {
-    "mtime": 1790273830.947958,
-    "seen": 1792124582.2094889,
-    "ast_hash": "a2760511c65806022ad20adf74370ff3",
-    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
-  },
   ".codex/hooks.json": {
     "mtime": 1792124665.459228,
     "seen": 1792124915.970912,
@@ -297,12 +261,6 @@
     "mtime": 1792124591.467439,
     "seen": 1792124915.9709399,
     "ast_hash": "91ea2d692a2ce217f3dba13f9c646b79",
-    "semantic_hash": ""
-  },
-  "public/logos/unh-shield.svg": {
-    "mtime": 1792125233.6661131,
-    "seen": 1792125235.91488,
-    "ast_hash": "37a4d72c6dd387c3c2418d811cf24daf",
     "semantic_hash": ""
   },
   "app/_components/page-transition.tsx": {
@@ -321,6 +279,12 @@
     "mtime": 1792160771.0708714,
     "seen": 1792160779.7750652,
     "ast_hash": "3c171e08b0cce3c5f42f0d318f30a2a6",
+    "semantic_hash": ""
+  },
+  "public/logos/unh.png": {
+    "mtime": 1792171473.3569682,
+    "seen": 1792171764.6984189,
+    "ast_hash": "8144210dcfeb86424c822cf51ca02b9e",
     "semantic_hash": ""
   }
 }

@@ -1,7 +1,7 @@
 [profile]
 first_name = "Kestutis"
 last_name = "Biskis"
-role = "Software engineer.\nStudent. Systems person."
+role = "Software engineer.\nStudent."
 bio = "I like figuring out how things work, then building something with what I learn."
 location = "Greater Boston"
 current_work = "UNH-IOL"
@@ -30,9 +30,6 @@ external = true
 [[experience]]
 organization = "UNH InterOperability Laboratory"
 organization_url = "https://www.iol.unh.edu/"
-logo = "/logos/unh-shield.svg"
-logo_width = 28
-logo_height = 32
 period = "May 2025 — Present"
 title = "Network Testing Technician"
 summary = "I test hosts, routers, and firewalls for IPv6 Ready Logo and USGv6 certification, then turn tricky protocol behavior into clear next steps for vendors."
@@ -42,9 +39,6 @@ tags = ["IPv6", "Interoperability", "Network testing"]
 [[education]]
 organization = "University of New Hampshire"
 organization_url = "https://www.unh.edu/"
-logo = "/logos/unh-shield.svg"
-logo_width = 28
-logo_height = 32
 period = "Class of 2028"
 degree = "B.S. in Computer Science"
 credential = "Expected May 2028 · GPA 3.5 · Dean's List"

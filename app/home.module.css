@@ -24,14 +24,13 @@
 .backgroundCard :global(.profile-content h3) { font: 500 22px/1.15 var(--font-geist-sans); letter-spacing: -.5px; margin-block: 12px; }
 .backgroundCard :global(.profile-content .organization) { font-size: 10px; }
 .backgroundCard :global(.profile-content > p) { font-size: 11px; line-height: 1.75; }
-.backgroundCard :global(.card-meta) { font: 9px var(--font-geist-mono), monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 13px; }
+.backgroundCard :global(.entry-header) { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.backgroundCard :global(.card-meta) { flex: none; margin: 2px 0 0; font: 9px var(--font-geist-mono), monospace; letter-spacing: .08em; text-align: right; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 .backgroundCard :global(.card-summary) { color: var(--foreground) !important; }
 .backgroundCard :global(.organization-with-logo), .backgroundCard :global(.credential) { display: inline-flex; align-items: center; gap: 6px; }
+.backgroundCard :global(.organization-with-logo) { min-width: 0; }
 .backgroundCard :global(.credential) { color: var(--muted); }
 .backgroundCard :global(.organization-logo) { flex-shrink: 0; width: 28px; height: 32px; object-fit: contain; }
-@media (prefers-color-scheme: dark) {
-  .backgroundCard :global(.organization-logo) { filter: brightness(0) invert(1); }
-}
 .backgroundCard :global(.skill-groups) { gap: 12px; }
 .backgroundCard :global(.skill-groups dt) { margin-bottom: 4px; }
 .backgroundCard :global(.skill-badges) { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; list-style: none; }
