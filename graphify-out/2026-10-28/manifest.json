@@ -288,51 +288,15 @@
     "semantic_hash": ""
   },
   "app/_components/theme-preview.tsx": {
-    "mtime": 1793208784.3800178,
-    "seen": 1793208785.947573,
-    "ast_hash": "70aaa14b22ac285a12ea6086e60f4e28",
+    "mtime": 1793208818.5868616,
+    "seen": 1793208905.8783202,
+    "ast_hash": "e6ca2670382ac634d6f18022ac2f205b",
     "semantic_hash": ""
   },
   "public/autumn-falling-leaf-sprites.webp": {
     "mtime": 1792184053.3682334,
     "seen": 1792184066.8241549,
     "ast_hash": "233d26dc0d915c6b3545385bb52ca82f",
-    "semantic_hash": ""
-  },
-  "public/christmas-elf.png": {
-    "mtime": 1792185102.9088514,
-    "seen": 1792185162.139958,
-    "ast_hash": "85127f9f53cd71300fbd0343834559df",
-    "semantic_hash": ""
-  },
-  "public/christmas-gift.png": {
-    "mtime": 1792185075.2063165,
-    "seen": 1792185162.13996,
-    "ast_hash": "ef135ef18f10dbc75dda45527d7aeb64",
-    "semantic_hash": ""
-  },
-  "public/christmas-igloo.png": {
-    "mtime": 1792185074.834376,
-    "seen": 1792185162.139961,
-    "ast_hash": "aef90805f042b0a3e287d26d42af9cd4",
-    "semantic_hash": ""
-  },
-  "public/christmas-sleigh-reindeer.png": {
-    "mtime": 1792185146.7059546,
-    "seen": 1792185162.139961,
-    "ast_hash": "0432ade0a20d8247b7bfef5992c15cd1",
-    "semantic_hash": ""
-  },
-  "public/christmas-tree.png": {
-    "mtime": 1792185074.7235522,
-    "seen": 1792185162.1399622,
-    "ast_hash": "3a430b1691860c03ce5454afdd4557bd",
-    "semantic_hash": ""
-  },
-  "public/christmas-footer-scene.svg": {
-    "mtime": 1792185203.9652438,
-    "seen": 1792185951.098956,
-    "ast_hash": "a4064b833b25a525fe030fd70b3e7a0b",
     "semantic_hash": ""
   },
   "content/toml.d.ts": {

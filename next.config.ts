@@ -14,6 +14,13 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.toml$/,
+      use: [resolve("content/toml-loader.cjs")],
+    });
+    return config;
+  },
 };
 
 const withMDX = createMDX({

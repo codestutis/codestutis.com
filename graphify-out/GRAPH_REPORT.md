@@ -1,7 +1,7 @@
 # Graph Report - codestutis.com  (2026-10-28)
 
 ## Corpus Check
-- 43 files · ~64,899 words
+- 43 files · ~27,840 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: .css 2, (none) 1, .toml 1)
 
@@ -9,6 +9,11 @@
 - 213 nodes · 289 edges · 34 communities (11 shown, 23 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `981ac236`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Tooling Configuration
