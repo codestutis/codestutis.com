@@ -1,5 +1,4 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import homeSource from "./home.toml";
 
 type TomlValue = string | number | boolean | string[];
 type TomlTable = Record<string, TomlValue>;
@@ -8,7 +7,7 @@ export type HomeContent = {
   profile: { first_name: string; last_name: string; role: string; bio: string; location: string; current_work: string; studying: string };
   intro: { eyebrow: string; title: string; accent_title: string; description: string };
   social_links: Array<{ label: string; href: string; external?: boolean }>;
-  experience: Array<{ organization: string; organization_url: string; period: string; title: string; summary: string; details: string; tags: string[] }>;
+  experience: Array<{ organization: string; organization_url: string; period: string; title: string; summary: string; tags: string[] }>;
   education: Array<{ organization: string; organization_url: string; period: string; degree: string; credential: string; major: string; coursework: string }>;
   skill_groups: Array<{ title: string; skills: string[] }>;
 };
@@ -62,4 +61,4 @@ function parseToml(source: string) {
   return document;
 }
 
-export const home = parseToml(readFileSync(join(process.cwd(), "content/home.toml"), "utf8")) as unknown as HomeContent;
+export const home = parseToml(homeSource) as unknown as HomeContent;

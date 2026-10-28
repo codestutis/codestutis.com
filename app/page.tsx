@@ -17,7 +17,7 @@ export default async function Home() {
       <p className={styles.bio}>{home.profile.bio}</p>
       <SocialLinks links={home.social_links} />
       <div className={styles.quickFacts}><p><span>Based in</span>{home.profile.location}</p><p><span>Working at</span>{home.profile.current_work}</p><p><span>Studying</span>{home.profile.studying}</p></div>
-      <Link className={styles.writingLink} href="/blog"><BookOpen size={14} /> Notes from the workbench <ArrowUpRight size={14} /></Link>
+      <Link className={styles.writingLink} href="/blog"><BookOpen size={14} /> Blog posts <ArrowUpRight size={14} /></Link>
     </aside>
     <div className={styles.desk}>
       <div className={styles.welcome}><p className="eyebrow">{home.intro.eyebrow}</p><h2>{home.intro.title}<br /><span>{home.intro.accent_title}</span></h2><p>{home.intro.description}</p></div>
@@ -35,7 +35,7 @@ export default async function Home() {
           <article className={styles.backgroundCard}><Skills groups={home.skill_groups} /></article>
         </section>
       </section>
-      <section className="selected-work" aria-labelledby="projects-heading"><div className="section-heading"><div><p className="eyebrow">Off the workbench</p><h2 id="projects-heading">Selected projects<span className={styles.count}>02</span></h2></div><Link href="/projects">Explore all ↗</Link></div><ProjectCards items={pinnedProjects} /></section>
+      <section className="selected-work" aria-labelledby="projects-heading"><div className="section-heading"><div><p className="eyebrow">Projects</p><h2 id="projects-heading">Selected projects<span className={styles.count}>02</span></h2></div><Link href="/projects">Explore all ↗</Link></div><ProjectCards items={pinnedProjects} /></section>
     </div>
   </div>;
 }

@@ -1,10 +1,19 @@
 import createMDX from "@next/mdx";
+import { resolve } from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  turbopack: {
+    rules: {
+      "*.toml": {
+        loaders: [resolve("content/toml-loader.cjs")],
+        as: "*.js",
+      },
+    },
+  },
 };
 
 const withMDX = createMDX({

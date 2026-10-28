@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { Mail } from "lucide-react";
 import { PageTransition } from "@/app/_components/page-transition";
+import { ThemePreview } from "@/app/_components/theme-preview";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
+        <ThemePreview />
         <header className="site-header">
           <Link href="/" className="wordmark"><span className="brand-symbol" aria-hidden="true">k.</span> codestutis.com</Link>
           <nav aria-label="Main navigation"><Link href="/">About</Link><Link href="/projects">Projects</Link><Link href="/blog">Blog</Link></nav>

@@ -6,9 +6,9 @@
     "semantic_hash": "940e811182d1bf73d959ec2758b4954b"
   },
   "app/_components/profile-content.tsx": {
-    "mtime": 1792171899.3221757,
-    "seen": 1792171917.3090749,
-    "ast_hash": "81d7887282c1646c531b6692b9ad2864",
+    "mtime": 1792186180.076019,
+    "seen": 1792186184.093069,
+    "ast_hash": "3c6ab981cb6deeaa3d5d688b67291c97",
     "semantic_hash": ""
   },
   "app/_components/project-cards.tsx": {
@@ -48,15 +48,15 @@
     "semantic_hash": "9d5082ffd9c5419312a6c4e630c6daa5"
   },
   "app/layout.tsx": {
-    "mtime": 1792168275.5272279,
-    "seen": 1792171346.1447198,
-    "ast_hash": "c3e3dfccca63f422b2e07905b7071b0d",
+    "mtime": 1793207371.3520186,
+    "seen": 1793207373.2712479,
+    "ast_hash": "b786daa25537f3f14243cb41f44c3f5a",
     "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1792127923.175553,
-    "seen": 1792127931.846367,
-    "ast_hash": "99702a3fe69f29b834949bedcfd361db",
+    "mtime": 1793208075.1197555,
+    "seen": 1793208076.9449,
+    "ast_hash": "a038b5d7a7e282edb04ca4704ae7e931",
     "semantic_hash": ""
   },
   "app/projects/[slug]/page.tsx": {
@@ -84,9 +84,9 @@
     "semantic_hash": "0f1c28f5fc4edd9ee705cf4ba6c507ed"
   },
   "content/home.ts": {
-    "mtime": 1792171899.4013329,
-    "seen": 1792171917.309089,
-    "ast_hash": "907fa61f6bc78f97acbac9bacd32146d",
+    "mtime": 1793208295.66351,
+    "seen": 1793208298.162067,
+    "ast_hash": "30b14740b1fb297134ff4c2d4fab247c",
     "semantic_hash": ""
   },
   "content/projects/index.ts": {
@@ -108,10 +108,10 @@
     "semantic_hash": ""
   },
   "next.config.ts": {
-    "mtime": 1792121447.1263714,
-    "seen": 1792124582.2094688,
-    "ast_hash": "f294a351166d780adb9ed3e18b36c0f0",
-    "semantic_hash": "f294a351166d780adb9ed3e18b36c0f0"
+    "mtime": 1793208510.2080553,
+    "seen": 1793208630.61149,
+    "ast_hash": "53ab8dddb665981d23ec0fb52e4613b8",
+    "semantic_hash": ""
   },
   "package.json": {
     "mtime": 1790721551.4179068,
@@ -285,6 +285,30 @@
     "mtime": 1792171473.3569682,
     "seen": 1792171764.6984189,
     "ast_hash": "8144210dcfeb86424c822cf51ca02b9e",
+    "semantic_hash": ""
+  },
+  "app/_components/theme-preview.tsx": {
+    "mtime": 1793208818.5868616,
+    "seen": 1793208905.8783202,
+    "ast_hash": "e6ca2670382ac634d6f18022ac2f205b",
+    "semantic_hash": ""
+  },
+  "public/autumn-falling-leaf-sprites.webp": {
+    "mtime": 1792184053.3682334,
+    "seen": 1792184066.8241549,
+    "ast_hash": "233d26dc0d915c6b3545385bb52ca82f",
+    "semantic_hash": ""
+  },
+  "content/toml.d.ts": {
+    "mtime": 1793208295.6954453,
+    "seen": 1793208298.1620731,
+    "ast_hash": "95c7b3e45ca5d075b00b79bc5ed8cbf7",
+    "semantic_hash": ""
+  },
+  "content/toml-loader.cjs": {
+    "mtime": 1793208510.2383406,
+    "seen": 1793208630.611486,
+    "ast_hash": "75b3fbe1a7bd565b58d3ff5d458438c9",
     "semantic_hash": ""
   }
 }
