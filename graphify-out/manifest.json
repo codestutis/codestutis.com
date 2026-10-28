@@ -48,9 +48,9 @@
     "semantic_hash": "9d5082ffd9c5419312a6c4e630c6daa5"
   },
   "app/layout.tsx": {
-    "mtime": 1793207371.3520186,
-    "seen": 1793207373.2712479,
-    "ast_hash": "b786daa25537f3f14243cb41f44c3f5a",
+    "mtime": 1793210276.7295594,
+    "seen": 1793210281.671712,
+    "ast_hash": "40bdfd705b59d2cbc8e51bcd36f32a18",
     "semantic_hash": ""
   },
   "app/page.tsx": {
@@ -214,12 +214,6 @@
     "seen": 1792124582.20948,
     "ast_hash": "f9da06c20d81aca428a73be5abbe09cf",
     "semantic_hash": "f9da06c20d81aca428a73be5abbe09cf"
-  },
-  "docs/research/latex-in-mdx.md": {
-    "mtime": 1790346661.4058495,
-    "seen": 1792124582.209481,
-    "ast_hash": "420270d5842cd724c699473a709516e6",
-    "semantic_hash": "420270d5842cd724c699473a709516e6"
   },
   "public/projects/chess-mistakes-trainer.svg": {
     "mtime": 1792099369.8193057,

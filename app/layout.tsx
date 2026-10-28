@@ -29,7 +29,7 @@ function LinkedInIcon() {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`dark ${geistSans.variable} ${geistMono.variable} antialiased`}>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <ThemePreview />

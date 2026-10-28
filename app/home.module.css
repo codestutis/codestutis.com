@@ -48,15 +48,6 @@
 .desk :global(.project-copy h3) { font-size: 17px; }
 .desk :global(.project-copy p) { font-size: 13px; }
 .desk :global(.project-tags li) { font-size: 13px; padding: 4px 7px; }
-@media (prefers-color-scheme: light) {
-  .avatar { background: var(--soft); border-color: #a9bdd5; box-shadow: inset 0 0 0 6px #f8faff, 8px 8px 0 #d5dfed; }
-  .avatar > span { color: var(--accent); }
-  .avatar small { color: var(--muted); }
-  .cursor, .profile h1 > span, .tabs button span { color: #9a4d20; }
-  .role { color: #344962; }
-  .welcome h2 span { color: var(--muted); }
-  .backgroundCard { box-shadow: 0 10px 28px #1420340d; }
-}
 @media (max-width: 1000px) {
   .workspace { grid-template-columns: 210px minmax(0,1fr); gap: 36px; }
   .welcome h2 { font-size: 37px; }

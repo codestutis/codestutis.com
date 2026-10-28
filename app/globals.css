@@ -1,29 +1,17 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  color-scheme: light;
-  --background: #f3f6fb;
-  --foreground: #142034;
-  --muted: #53647c;
-  --accent: #245b9e;
-  --surface: #ffffff;
-  --line: #cbd5e3;
-  --strong-line: #9babc0;
-  --soft: #e5edf7;
+  color-scheme: dark;
+  --background: #142034;
+  --foreground: #edf2fc;
+  --muted: #a8b8ce;
+  --accent: #a3c4ff;
+  --surface: #1d2d45;
+  --line: #34455e;
+  --strong-line: #64738c;
+  --soft: #293b55;
   --display: var(--font-geist-sans), sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --background: #142034;
-    --foreground: #edf2fc;
-    --muted: #a8b8ce;
-    --accent: #a3c4ff;
-    --surface: #1d2d45;
-    --line: #34455e;
-    --strong-line: #64738c;
-    --soft: #293b55;
-  }
 }
 @theme inline {
   --color-background: var(--background);
@@ -96,12 +84,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .mdx-table tbody tr:last-child .mdx-table-cell { border-bottom: 0; }
 .mdx-table tbody tr:nth-child(even) .mdx-table-cell { background: color-mix(in srgb, var(--soft) 46%, transparent); }
 .mdx-code-block { margin-top: 1.5rem; overflow-x: auto; border: 1px solid var(--strong-line); border-radius: .75rem; padding: 1.25rem; font-family: var(--font-geist-mono), monospace; font-size: .875rem; line-height: 1.75; box-shadow: 0 1px 2px color-mix(in srgb, var(--foreground) 12%, transparent); }
-.shiki, .shiki span { color: var(--shiki-light); }
-.shiki { background-color: var(--shiki-light-bg); }
-@media (prefers-color-scheme: dark) {
-  .shiki, .shiki span { color: var(--shiki-dark); }
-  .shiki { background-color: var(--shiki-dark-bg); }
-}
+.shiki, .shiki span { color: var(--shiki-dark); }
+.shiki { background-color: var(--shiki-dark-bg); }
 @media (max-width: 700px) {
   .site-header, .site-footer, .home { width: calc(100% - 36px); }
   .site-header { min-height: 84px; }
@@ -127,12 +111,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .project-card { border-radius: 12px; }
 .project-art img { filter: saturate(.78) brightness(.88); }
 .project-card:hover { box-shadow: 0 12px 28px #050c1b50; }
-@media (prefers-color-scheme: light) {
-  .brand-symbol { background: var(--soft); color: var(--accent); border-color: var(--line); }
-  .project-art img { filter: none; }
-  .project-card:hover { box-shadow: 0 12px 28px #14203418; }
-}
-
 .seasonal-theme { display: none; }
 :root[data-theme="halloween"] .seasonal-theme-halloween,
 :root[data-theme="thanksgiving"] .seasonal-theme-thanksgiving,
@@ -297,15 +275,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 :root[data-theme="christmas"] .project-card::before { content: ""; position: absolute; z-index: 2; left: 0; right: 0; top: 0; height: 15px; pointer-events: none; background-image: radial-gradient(circle at 6px 8px, #f45e54 0 3px, transparent 3.8px), radial-gradient(circle at 19px 8px, #f5d56c 0 3px, transparent 3.8px), radial-gradient(circle at 32px 8px, #65bd83 0 3px, transparent 3.8px), linear-gradient(177deg, transparent 46%, #58705a 48% 51%, transparent 53%); background-size: 39px 18px; animation: light-twinkle 2.1s ease-in-out infinite alternate; }
 :root[data-theme="christmas"] .project-art::after { content: ""; position: absolute; inset: auto 0 -1px; height: 23px; background: radial-gradient(ellipse 18% 76% at 6% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 20% 85% at 23% 100%, #f5faff 97%, transparent 100%), radial-gradient(ellipse 17% 78% at 43% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 22% 90% at 64% 100%, #f5faff 97%, transparent 100%), radial-gradient(ellipse 20% 82% at 84% 100%, #fbfdff 97%, transparent 100%), linear-gradient(to bottom, transparent 42%, #e9f4fb 43% 100%); filter: drop-shadow(0 -2px 3px #bfd8e655); }
 @keyframes light-twinkle { from { opacity: .72; } to { opacity: 1; } }
-:root[data-theme="halloween"] { --background: #f4f0f7; --foreground: #281e30; --muted: #65576e; --surface: #fcf9ff; --accent: #9e4a16; --soft: #eee3f0; --line: #d5c8dc; --strong-line: #9d86a8; }
-:root[data-theme="thanksgiving"] { --background: #f8f1e6; --foreground: #34271c; --muted: #725f4d; --surface: #fffaf1; --accent: #8f531c; --soft: #efe1cb; --line: #d8c5a7; --strong-line: #a48a63; }
-:root[data-theme="christmas"] { --background: #eff6fb; --foreground: #1d2d36; --muted: #526b76; --surface: #fbfdff; --accent: #28684c; --soft: #dfece4; --line: #bdd0d6; --strong-line: #78949c; }
+:root[data-theme="halloween"] { --background: #171421; --foreground: #f4edf7; --muted: #beb2c8; --surface: #211d2c; --accent: #ff9b4a; --soft: #302735; --line: #433747; --strong-line: #725467; }
+:root[data-theme="thanksgiving"] { --background: #211a16; --foreground: #f3e7d4; --muted: #c3ae91; --surface: #2c221b; --accent: #edbb77; --soft: #3d3024; --line: #544331; --strong-line: #8f7451; }
+:root[data-theme="christmas"] { --background: #14212a; --foreground: #edf5f7; --muted: #afc4ca; --surface: #1d2d36; --accent: #8cd2a8; --soft: #293d34; --line: #40594b; --strong-line: #6c917b; }
 :root[data-theme="christmas"] { background-color: #e9f4fb; background-image: radial-gradient(ellipse 16% 65% at 5% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 20% 77% at 21% 100%, #f2f8fc 97%, transparent 100%), radial-gradient(ellipse 18% 68% at 39% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 23% 82% at 59% 100%, #f2f8fc 97%, transparent 100%), radial-gradient(ellipse 19% 72% at 79% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 17% 67% at 97% 100%, #f2f8fc 97%, transparent 100%), linear-gradient(to bottom, transparent 36%, #e9f4fb 37% 100%); background-size: 100vw 76px; background-position: bottom; background-repeat: repeat-x; }
-@media (prefers-color-scheme: dark) {
-  :root[data-theme="halloween"] { --background: #171421; --foreground: #f4edf7; --muted: #beb2c8; --surface: #211d2c; --accent: #ff9b4a; --soft: #302735; --line: #433747; --strong-line: #725467; }
-  :root[data-theme="thanksgiving"] { --background: #211a16; --foreground: #f3e7d4; --muted: #c3ae91; --surface: #2c221b; --accent: #edbb77; --soft: #3d3024; --line: #544331; --strong-line: #8f7451; }
-  :root[data-theme="christmas"] { --background: #14212a; --foreground: #edf5f7; --muted: #afc4ca; --surface: #1d2d36; --accent: #8cd2a8; --soft: #293d34; --line: #40594b; --strong-line: #6c917b; }
-}
 @media (prefers-reduced-motion: reduce) { .seasonal-decorations span { animation: none; } }
 @media (max-width: 1279px) { .seasonal-side-characters { display: none; } }
 @media (max-width: 700px) { .christmas-corner-lights { display: none; } }
