@@ -48,9 +48,9 @@
     "semantic_hash": "9d5082ffd9c5419312a6c4e630c6daa5"
   },
   "app/layout.tsx": {
-    "mtime": 1793207371.3520186,
-    "seen": 1793207373.2712479,
-    "ast_hash": "b786daa25537f3f14243cb41f44c3f5a",
+    "mtime": 1793246158.7867682,
+    "seen": 1793246177.8453262,
+    "ast_hash": "0e7ad592affaa03f98656ee4ee05bef9",
     "semantic_hash": ""
   },
   "app/page.tsx": {
@@ -215,12 +215,6 @@
     "ast_hash": "f9da06c20d81aca428a73be5abbe09cf",
     "semantic_hash": "f9da06c20d81aca428a73be5abbe09cf"
   },
-  "docs/research/latex-in-mdx.md": {
-    "mtime": 1790346661.4058495,
-    "seen": 1792124582.209481,
-    "ast_hash": "420270d5842cd724c699473a709516e6",
-    "semantic_hash": "420270d5842cd724c699473a709516e6"
-  },
   "public/projects/chess-mistakes-trainer.svg": {
     "mtime": 1792099369.8193057,
     "seen": 1792124582.209484,
@@ -287,12 +281,6 @@
     "ast_hash": "8144210dcfeb86424c822cf51ca02b9e",
     "semantic_hash": ""
   },
-  "app/_components/theme-preview.tsx": {
-    "mtime": 1793208818.5868616,
-    "seen": 1793208905.8783202,
-    "ast_hash": "e6ca2670382ac634d6f18022ac2f205b",
-    "semantic_hash": ""
-  },
   "public/autumn-falling-leaf-sprites.webp": {
     "mtime": 1792184053.3682334,
     "seen": 1792184066.8241549,
@@ -309,6 +297,12 @@
     "mtime": 1793208510.2383406,
     "seen": 1793208630.611486,
     "ast_hash": "75b3fbe1a7bd565b58d3ff5d458438c9",
+    "semantic_hash": ""
+  },
+  "app/_components/seasonal-decorations.tsx": {
+    "mtime": 1793246158.8435667,
+    "seen": 1793246177.845321,
+    "ast_hash": "a85b5829b66a300add90d948641606cc",
     "semantic_hash": ""
   }
 }

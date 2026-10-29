@@ -193,7 +193,7 @@ function SideCharacters({ theme }: { theme: Exclude<Theme, "default"> }) {
   );
 }
 
-export function ThemePreview() {
+export function SeasonalDecorations() {
   useEffect(() => {
     const month = new Date().getMonth();
     const currentTheme: Theme = month === 9

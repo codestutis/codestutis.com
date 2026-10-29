@@ -1,17 +1,17 @@
 # Graph Report - codestutis.com  (2026-10-28)
 
 ## Corpus Check
-- 43 files · ~27,840 words
+- 42 files · ~27,156 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: .css 2, (none) 1, .toml 1)
 
 ## Summary
-- 213 nodes · 289 edges · 34 communities (11 shown, 23 thin omitted)
+- 214 nodes · 292 edges · 33 communities (10 shown, 23 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `981ac236`
+- Built from commit: `2217faa5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,12 +21,12 @@
 - app/page.tsx
 - TypeScript Configuration
 - app/layout.tsx
-- blog-post-list.tsx
+- mdx-components.tsx
 - Blog Content Loader
 - Runtime Dependencies
 - Development Tooling
 - CSS Pipeline
-- app/layout.tsx
+- seasonal-decorations.tsx
 - Agent Instructions
 - Claude Instructions
 - MDX Feature Article
@@ -39,7 +39,6 @@
 - Queens Solver Project
 - Project Template
 - Readme
-- MDX Math Research
 - GitHub Pages Deployment
 - toml.d.ts
 - Chess Trainer Artwork
@@ -58,7 +57,7 @@
 6. `TagFilter()` - 7 edges
 7. `Home()` - 7 edges
 8. `SideCharacters()` - 6 edges
-9. `ThemePreview()` - 6 edges
+9. `SeasonalDecorations()` - 6 edges
 10. `getPost()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -76,31 +75,27 @@
 ## Import Cycles
 - None detected.
 
-## Communities (34 total, 23 thin omitted)
+## Communities (33 total, 23 thin omitted)
 
 ### Community 0 - "Tooling Configuration"
-Cohesion: 0.06
-Nodes (28): eslintConfig, nextConfig, withMDX, name, private, scripts, build, dev (+20 more)
+Cohesion: 0.07
+Nodes (27): metadata, eslintConfig, name, private, scripts, build, dev, lint (+19 more)
 
 ### Community 1 - "Project Catalog"
-Cohesion: 0.16
-Nodes (19): ProjectCards(), ProjectGallery(), ProjectGalleryProps, ProjectsPage(), dynamicParams, generateMetadata(), generateStaticParams(), ProjectPage() (+11 more)
+Cohesion: 0.11
+Nodes (23): BlogPostListProps, BlogPostSummary, ProjectGallery(), ProjectGalleryProps, TagFilter(), TagFilterProps, ProjectsPage(), dynamicParams (+15 more)
 
 ### Community 2 - "app/page.tsx"
-Cohesion: 0.21
-Nodes (14): Education(), Experience(), Skills(), SocialLinks(), Home(), home, HomeContent, parseToml() (+6 more)
+Cohesion: 0.20
+Nodes (15): Education(), Experience(), Skills(), SocialLinks(), ProjectCards(), Home(), home, HomeContent (+7 more)
 
 ### Community 3 - "TypeScript Configuration"
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
 
 ### Community 4 - "app/layout.tsx"
-Cohesion: 0.11
-Nodes (13): metadata, PageTransition(), geistMono, geistSans, GitHubIcon(), LinkedInIcon(), metadata, RootLayout() (+5 more)
-
-### Community 5 - "blog-post-list.tsx"
-Cohesion: 0.29
-Nodes (4): BlogPostListProps, BlogPostSummary, TagFilter(), TagFilterProps
+Cohesion: 0.13
+Nodes (12): PageTransition(), geistMono, geistSans, GitHubIcon(), LinkedInIcon(), metadata, RootLayout(), metadata (+4 more)
 
 ### Community 6 - "Blog Content Loader"
 Cohesion: 0.19
@@ -114,33 +109,33 @@ Nodes (13): dependencies, katex, lucide-react, @mdx-js/loader, @mdx-js/react, ne
 Cohesion: 0.20
 Nodes (10): devDependencies, eslint, eslint-config-next, @shikijs/rehype, tailwindcss, @tailwindcss/postcss, @types/node, @types/react (+2 more)
 
-### Community 10 - "app/layout.tsx"
-Cohesion: 0.27
-Nodes (11): ChristmasIcicles(), ChristmasLights(), Pumpkin(), Santa(), seasonalThemes, SideCharacters(), Snowman(), Theme (+3 more)
+### Community 10 - "seasonal-decorations.tsx"
+Cohesion: 0.23
+Nodes (12): ChristmasIcicles(), ChristmasLights(), DraggablePumpkin(), Pumpkin(), Santa(), SeasonalDecorations(), seasonalThemes, SideCharacters() (+4 more)
 
 ### Community 36 - "Portfolio design options"
 Cohesion: 0.33
 Nodes (5): Inspiration, Portfolio design options, Preview, Shared changes, Validation
 
 ## Knowledge Gaps
-- **34 isolated node(s):** `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx`, `react-dom`, `rehype-katex` (+29 more)
+- **33 isolated node(s):** `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx`, `react-dom`, `rehype-katex` (+28 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 126 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `app/layout.tsx` to `Tooling Configuration`, `Project Catalog`, `blog-post-list.tsx`, `Blog Content Loader`, `app/layout.tsx`?**
-  _High betweenness centrality (0.202) - this node is a cross-community bridge._
+- **Why does `react` connect `Project Catalog` to `Tooling Configuration`, `app/layout.tsx`, `mdx-components.tsx`, `Blog Content Loader`, `seasonal-decorations.tsx`?**
+  _High betweenness centrality (0.210) - this node is a cross-community bridge._
 - **What connects `@mdx-js/loader`, `@mdx-js/react`, `@types/mdx` to the rest of the system?**
-  _34 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _33 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Tooling Configuration` be split into smaller, more focused modules?**
-  _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
-- **Why does `next` connect `app/layout.tsx` to `Tooling Configuration`, `Project Catalog`, `app/page.tsx`, `blog-post-list.tsx`, `Blog Content Loader`?**
+  _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
+- **Why does `next` connect `app/layout.tsx` to `Tooling Configuration`, `Project Catalog`, `app/page.tsx`, `Blog Content Loader`?**
   _High betweenness centrality (0.180) - this node is a cross-community bridge._
-- **Should `TypeScript Configuration` be split into smaller, more focused modules?**
-  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
+- **Should `Project Catalog` be split into smaller, more focused modules?**
+  _Cohesion score 0.11363636363636363 - nodes in this community are weakly interconnected._
 - **Why does `dependencies` connect `Runtime Dependencies` to `Tooling Configuration`?**
   _High betweenness centrality (0.083) - this node is a cross-community bridge._
-- **Should `app/layout.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.10507246376811594 - nodes in this community are weakly interconnected._
+- **Should `TypeScript Configuration` be split into smaller, more focused modules?**
+  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

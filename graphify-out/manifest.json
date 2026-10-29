@@ -6,9 +6,9 @@
     "semantic_hash": "940e811182d1bf73d959ec2758b4954b"
   },
   "app/_components/profile-content.tsx": {
-    "mtime": 1792186180.076019,
-    "seen": 1792186184.093069,
-    "ast_hash": "3c6ab981cb6deeaa3d5d688b67291c97",
+    "mtime": 1793246833.0768356,
+    "seen": 1793246836.905855,
+    "ast_hash": "970d6a1218d6f34395b36017be134201",
     "semantic_hash": ""
   },
   "app/_components/project-cards.tsx": {
@@ -48,9 +48,9 @@
     "semantic_hash": "9d5082ffd9c5419312a6c4e630c6daa5"
   },
   "app/layout.tsx": {
-    "mtime": 1793210276.7295594,
-    "seen": 1793210281.671712,
-    "ast_hash": "40bdfd705b59d2cbc8e51bcd36f32a18",
+    "mtime": 1793246259.1722684,
+    "seen": 1793246264.766088,
+    "ast_hash": "0e7ad592affaa03f98656ee4ee05bef9",
     "semantic_hash": ""
   },
   "app/page.tsx": {
@@ -281,12 +281,6 @@
     "ast_hash": "8144210dcfeb86424c822cf51ca02b9e",
     "semantic_hash": ""
   },
-  "app/_components/theme-preview.tsx": {
-    "mtime": 1793208818.5868616,
-    "seen": 1793208905.8783202,
-    "ast_hash": "e6ca2670382ac634d6f18022ac2f205b",
-    "semantic_hash": ""
-  },
   "public/autumn-falling-leaf-sprites.webp": {
     "mtime": 1792184053.3682334,
     "seen": 1792184066.8241549,
@@ -303,6 +297,12 @@
     "mtime": 1793208510.2383406,
     "seen": 1793208630.611486,
     "ast_hash": "75b3fbe1a7bd565b58d3ff5d458438c9",
+    "semantic_hash": ""
+  },
+  "app/_components/seasonal-decorations.tsx": {
+    "mtime": 1793246259.1720586,
+    "seen": 1793246264.766083,
+    "ast_hash": "4902d02109dc3be0df089d4307524eac",
     "semantic_hash": ""
   }
 }

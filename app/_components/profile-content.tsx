@@ -11,7 +11,7 @@ export function SocialLinks({ links }: { links: HomeContent["social_links"] }) {
 export function Experience({ items }: { items: HomeContent["experience"] }) {
   return <>{items.map((item) => <div className="profile-content" key={`${item.organization}-${item.title}`}>
     <div className="entry-header">
-      <a className="organization organization-with-logo" href={item.organization_url} target="_blank" rel="noreferrer"><Image className="organization-logo" src="/logos/unh.png" alt="" width={36} height={27} unoptimized />{item.organization} ↗</a>
+      <a className="organization organization-with-logo" href={item.organization_url} target="_blank" rel="noreferrer"><Image className="organization-logo" src="/logos/unh.png" alt="" width={36} height={27} loading="eager" unoptimized />{item.organization} ↗</a>
       <p className="card-meta">{item.period}</p>
     </div>
     <h3>{item.title}</h3>
@@ -23,7 +23,7 @@ export function Experience({ items }: { items: HomeContent["experience"] }) {
 export function Education({ items }: { items: HomeContent["education"] }) {
   return <>{items.map((item) => <div className="profile-content" key={`${item.organization}-${item.degree}`}>
     <div className="entry-header">
-      <a className="organization organization-with-logo" href={item.organization_url} target="_blank" rel="noreferrer"><Image className="organization-logo" src="/logos/unh.png" alt="" width={36} height={27} unoptimized />{item.organization} ↗</a>
+      <a className="organization organization-with-logo" href={item.organization_url} target="_blank" rel="noreferrer"><Image className="organization-logo" src="/logos/unh.png" alt="" width={36} height={27} loading="eager" unoptimized />{item.organization} ↗</a>
       <p className="card-meta">{item.period}</p>
     </div>
     <h3>{item.degree}</h3>
