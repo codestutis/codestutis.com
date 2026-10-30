@@ -33,7 +33,7 @@ organization_url = "https://www.iol.unh.edu/"
 period = "May 2025 — Present"
 title = "Network Testing Technician"
 summary = "I test hosts, routers, and firewalls for IPv6 Ready Logo and USGv6 certification."
-tags = ["IPv6", "Interoperability", "Network testing"]
+tags = ["IPv6", "OSPF", "Firewalls"]
 
 [[education]]
 organization = "University of New Hampshire"
