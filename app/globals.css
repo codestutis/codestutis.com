@@ -278,6 +278,33 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 :root[data-theme="halloween"] { --background: #171421; --foreground: #f4edf7; --muted: #beb2c8; --surface: #211d2c; --accent: #ff9b4a; --soft: #302735; --line: #433747; --strong-line: #725467; }
 :root[data-theme="thanksgiving"] { --background: #211a16; --foreground: #f3e7d4; --muted: #c3ae91; --surface: #2c221b; --accent: #edbb77; --soft: #3d3024; --line: #544331; --strong-line: #8f7451; }
 :root[data-theme="christmas"] { --background: #14212a; --foreground: #edf5f7; --muted: #afc4ca; --surface: #1d2d36; --accent: #8cd2a8; --soft: #293d34; --line: #40594b; --strong-line: #6c917b; }
+:root[data-haunt-phase] { cursor: none !important; }
+:root[data-haunt-phase] * { cursor: none !important; }
+.haunt-overlay { position: fixed; z-index: 10000; inset: 0; overflow: hidden; pointer-events: none; }
+.haunt-lightning { position: absolute; inset: 0; background: #eef7ff; animation: haunt-lightning-flash 720ms steps(1, end) both; }
+.haunt-bolt { position: absolute; top: -8vh; left: 38vw; width: 18vw; height: 112vh; fill: #fff; opacity: 0; filter: drop-shadow(0 0 18px #d8efff) drop-shadow(0 0 60px #a6d5ff); animation: haunt-bolt-flash 720ms steps(1, end) both; }
+.haunt-bolt-secondary { left: 67vw; width: 12vw; height: 80vh; animation-delay: 28ms; }
+.haunt-darkness, .haunt-beam { position: absolute; inset: 0; }
+.haunt-blackout, .haunt-flicker { position: absolute; inset: 0; background: #030205; }
+.haunt-flicker { animation: haunt-lamp-flicker 800ms steps(1, end) both; }
+.haunt-darkness { background: radial-gradient(circle 215px at var(--flashlight-x, 50vw) var(--flashlight-y, 50vh), transparent 0 64px, rgba(3, 2, 5, .16) 92px, rgba(3, 2, 5, .78) 152px, #030205 215px); }
+.haunt-beam { background: radial-gradient(circle 205px at var(--flashlight-x, 50vw) var(--flashlight-y, 50vh), rgba(255, 225, 176, .24) 0, rgba(255, 197, 128, .15) 34px, rgba(255, 148, 70, .045) 105px, transparent 205px); mix-blend-mode: screen; }
+.haunt-face { position: absolute; z-index: 2; inset: 0; opacity: 1; background: url("/halloween/jumpscare-face-v2.webp") center / min(112vw, 108vh) min(112vw, 108vh) no-repeat; filter: drop-shadow(0 0 34px #9d321b99) contrast(1.08); }
+.haunt-face-visible { animation: haunt-face-lunge 2000ms cubic-bezier(.12, .86, .13, 1) both; }
+.haunt-scare-flash, .haunt-static { position: absolute; inset: 0; }
+.haunt-scare-flash { z-index: 1; background: #fff4df; animation: haunt-scare-flash 850ms linear both; }
+.haunt-static { opacity: 0; background: repeating-linear-gradient(0deg, #e7d9c51c 0 1px, transparent 1px 3px); mix-blend-mode: screen; animation: haunt-static-burst 1400ms steps(2, end) both; }
+:root[data-haunt-phase="lightning"] body > :not(.haunt-overlay) { animation: haunt-screen-jolt 720ms both; }
+:root[data-haunt-phase="scare"] body > :not(.haunt-overlay) { animation: haunt-screen-jolt-hard 1400ms both; }
+@keyframes haunt-lightning-flash { 0%, 100% { opacity: 0; } 8% { opacity: .84; } 13% { opacity: .08; } 22% { opacity: .02; } 29% { opacity: .98; } 33% { opacity: .14; } 38% { opacity: .78; } 45% { opacity: .04; } 51% { opacity: .48; } 58% { opacity: 0; } }
+@keyframes haunt-lamp-flicker { 0%, 12%, 23%, 39%, 56%, 72% { opacity: 1; } 7%, 18%, 31%, 48%, 64%, 81%, 100% { opacity: 0; } 88% { opacity: .86; } 93% { opacity: .18; } }
+@keyframes haunt-bolt-flash { 0%, 100% { opacity: 0; } 9% { opacity: 1; } 14% { opacity: .08; } 28% { opacity: 0; } 30% { opacity: 1; } 37% { opacity: .12; } 41% { opacity: .8; } 48% { opacity: 0; } }
+@keyframes haunt-screen-jolt { 0%, 100% { transform: translate(0); } 12% { transform: translate(-5px, 3px); } 30% { transform: translate(4px, -3px); } 42% { transform: translate(-2px, 2px); } }
+@keyframes haunt-screen-jolt-hard { 0%, 100% { transform: translate(0) rotate(0); } 7% { transform: translate(-11px, 7px) rotate(-.4deg); } 16% { transform: translate(9px, -6px) rotate(.35deg); } 25% { transform: translate(-7px, -3px) rotate(-.25deg); } 34% { transform: translate(5px, 5px) rotate(.2deg); } 44% { transform: translate(-2px, -2px); } }
+@keyframes haunt-face-lunge { 0% { transform: translateY(16vh) scale(.24) rotate(7deg); filter: brightness(.55); } 9% { transform: translateY(8vh) scale(.52) rotate(-3deg); filter: brightness(1.2); } 22% { transform: translateY(-1vh) scale(1.24) rotate(1deg); filter: brightness(1.85); } 30% { transform: translateY(1vh) scale(1.12) rotate(-1.4deg); filter: brightness(.85); } 44% { transform: translateY(-1vh) scale(1.33) rotate(.8deg); filter: brightness(1.3); } 70% { transform: scale(1.31); } 100% { transform: translateY(-2vh) scale(1.58) rotate(-2deg); filter: brightness(.55); } }
+@keyframes haunt-scare-flash { 0% { opacity: .96; } 5% { opacity: 0; } 13% { opacity: .42; background: #9d1915; } 17% { opacity: 0; } 28% { opacity: .16; background: #f4e9d6; } 32%, 100% { opacity: 0; } }
+@keyframes haunt-static-burst { 0%, 19%, 34%, 56%, 100% { opacity: 0; } 20%, 27% { opacity: .58; } 28%, 30% { opacity: .12; } 57%, 62% { opacity: .24; } }
+@media (prefers-reduced-motion: reduce) { .haunt-overlay, :root[data-haunt-phase] body > :not(.haunt-overlay) { animation: none !important; } }
 :root[data-theme="christmas"] { background-color: #e9f4fb; background-image: radial-gradient(ellipse 16% 65% at 5% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 20% 77% at 21% 100%, #f2f8fc 97%, transparent 100%), radial-gradient(ellipse 18% 68% at 39% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 23% 82% at 59% 100%, #f2f8fc 97%, transparent 100%), radial-gradient(ellipse 19% 72% at 79% 100%, #fbfdff 97%, transparent 100%), radial-gradient(ellipse 17% 67% at 97% 100%, #f2f8fc 97%, transparent 100%), linear-gradient(to bottom, transparent 36%, #e9f4fb 37% 100%); background-size: 100vw 76px; background-position: bottom; background-repeat: repeat-x; }
 @media (prefers-reduced-motion: reduce) { .seasonal-decorations span { animation: none; } }
 @media (max-width: 1279px) { .seasonal-side-characters { display: none; } }

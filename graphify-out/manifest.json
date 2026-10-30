@@ -12,10 +12,10 @@
     "semantic_hash": ""
   },
   "app/_components/project-cards.tsx": {
-    "mtime": 1792123700.717524,
-    "seen": 1792124582.2094579,
+    "mtime": 1793388035.0317295,
+    "seen": 1793388040.213873,
     "ast_hash": "13a769238600775c05de4e7efb011025",
-    "semantic_hash": "13a769238600775c05de4e7efb011025"
+    "semantic_hash": ""
   },
   "app/_components/project-gallery.tsx": {
     "mtime": 1790722297.9219398,
@@ -48,9 +48,9 @@
     "semantic_hash": "9d5082ffd9c5419312a6c4e630c6daa5"
   },
   "app/layout.tsx": {
-    "mtime": 1793246259.1722684,
-    "seen": 1793246264.766088,
-    "ast_hash": "0e7ad592affaa03f98656ee4ee05bef9",
+    "mtime": 1793387772.8387623,
+    "seen": 1793387779.246516,
+    "ast_hash": "e28b93f670a25bcec091aa873c071900",
     "semantic_hash": ""
   },
   "app/page.tsx": {
@@ -300,9 +300,33 @@
     "semantic_hash": ""
   },
   "app/_components/seasonal-decorations.tsx": {
-    "mtime": 1793246259.1720586,
-    "seen": 1793246264.766083,
-    "ast_hash": "4902d02109dc3be0df089d4307524eac",
+    "mtime": 1793383302.200044,
+    "seen": 1793383316.589712,
+    "ast_hash": "0fa0c7583d72213ea605cd46b72e7763",
+    "semantic_hash": ""
+  },
+  "app/_components/halloween-haunt.tsx": {
+    "mtime": 1793388034.999317,
+    "seen": 1793388040.2138681,
+    "ast_hash": "63278be21e112b5a20524257da5db071",
+    "semantic_hash": ""
+  },
+  "docs/halloween-lightning-jumpscare-spec.md": {
+    "mtime": 1793388035.0749476,
+    "seen": 1793388040.213917,
+    "ast_hash": "03278e1082cfb2db5da2cc94a7f54495",
+    "semantic_hash": ""
+  },
+  "public/halloween/jumpscare-face.webp": {
+    "mtime": 1793382880.5462549,
+    "seen": 1793383296.552212,
+    "ast_hash": "bafa8f94deddd66770b70f623586d503",
+    "semantic_hash": ""
+  },
+  "public/halloween/jumpscare-face-v2.webp": {
+    "mtime": 1793385531.085454,
+    "seen": 1793385549.129171,
+    "ast_hash": "899af273db897b90dd794d7ec8ed2749",
     "semantic_hash": ""
   }
 }

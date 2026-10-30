@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { HalloweenHaunt } from "./halloween-haunt";
 
 const themes = {
   default: [],
@@ -11,6 +12,11 @@ const themes = {
 const seasonalThemes = ["halloween", "thanksgiving", "christmas"] as const;
 
 type Theme = keyof typeof themes;
+
+function getCurrentTheme(): Theme {
+  const month = new Date().getMonth();
+  return month === 9 ? "halloween" : month === 10 ? "thanksgiving" : month === 11 ? "christmas" : "default";
+}
 
 function Pumpkin({ variety }: { variety: "grin" | "smile" }) {
   return (
@@ -194,16 +200,9 @@ function SideCharacters({ theme }: { theme: Exclude<Theme, "default"> }) {
 }
 
 export function SeasonalDecorations() {
-  useEffect(() => {
-    const month = new Date().getMonth();
-    const currentTheme: Theme = month === 9
-      ? "halloween"
-      : month === 10
-        ? "thanksgiving"
-        : month === 11
-          ? "christmas"
-          : "default";
+  const currentTheme = getCurrentTheme();
 
+  useEffect(() => {
     if (currentTheme === "default") {
       document.documentElement.removeAttribute("data-theme");
     } else {
@@ -211,7 +210,7 @@ export function SeasonalDecorations() {
     }
 
     return () => document.documentElement.removeAttribute("data-theme");
-  }, []);
+  }, [currentTheme]);
 
   return (
     <>
@@ -224,6 +223,7 @@ export function SeasonalDecorations() {
           {theme === "christmas" && <><ChristmasLights /><ChristmasIcicles /></>}
         </div>
       ))}
+      <HalloweenHaunt active={currentTheme === "halloween"} />
     </>
   );
 }

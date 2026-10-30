@@ -29,7 +29,14 @@ function LinkedInIcon() {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`dark ${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`dark ${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(()=>{const month=new Date().getMonth();const theme=month===9?"halloween":month===10?"thanksgiving":month===11?"christmas":null;if(theme)document.documentElement.dataset.theme=theme})()`,
+          }}
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <SeasonalDecorations />
